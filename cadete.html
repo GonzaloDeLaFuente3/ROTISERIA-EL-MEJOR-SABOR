@@ -1,0 +1,123 @@
+<!--CUIL, nombre completo (apellidos y nombres), 
+teléfonos  (fijo  y  celular),  domicilio  (calle,  número,  localidad,  departamento),  fecha  de 
+nacimiento, fecha en la que ingresó a trabajar a la rotisería. De los cadetes que entregan los 
+pedidos también se guarda información de la  de su carnet de conductor, patente 
+del vehículo y código de zona de entregas asignada.-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadete</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Sistema de Registro de cadetes</h1>
+                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
+                <br>
+            </div>
+        </header>
+        
+        <div>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend><strong>Informacion para completar el resgistro</strong></legend>
+                    <div>
+                        <label for="cuilCadete"><strong>(*) Cuil</strong></label>
+                        <br>
+                        <input type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="">
+                    </div>
+                    <div>
+                        
+                        <h4><strong>(*) Apellido y nombre</strong></h4>
+                        <label for="nombre">Nombre:</label> &nbsp;
+                        
+                        <input type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" required="">&nbsp;&nbsp;
+                        <label for="apellido">Apellido:</label> &nbsp;
+                        <input type="text" name="apellido" id="apellido" size="50" maxlength="50" placeholder="Apellido" required="">
+                    </div>
+                    <div>
+                        
+                        <h4><strong>Numeros de Telefonos</strong></h4>
+                        <label for="telefonoFijo">(*) Telefono fijo:</label>&nbsp;
+                        
+                        <input type="tel" name="telefonoFijo" id="telefonoFijo" placeholder="Telefono fijo">&nbsp;&nbsp;
+                        <label for="telefonoCelular">(*) Telefono celular:</label>&nbsp;
+                        
+                        <input type="tel" name="telefonoCelular" id="telefonoCelular" placeholder="Telefono celular">
+                    </div>
+                    <div> 
+                        <h4><strong>Domicilio</strong></h4>
+                        <label for="calle"></label>(*) Calle: <br>&nbsp;
+                         
+                        <input type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle">&nbsp;&nbsp;
+                        <label for="domicilioNumero"></label>(*) Numero:&nbsp; 
+                         
+                        <input type="number" name="domicilioNumero" id="domicilioNumero" placeholder="Numero" required=""> <br> <br>
+                        <label for="departamento"></label>(*) Departamento: &nbsp;
+                         
+                        <input type="text" name="departamento" id="departamento" placeholder="Departamento"> &nbsp;&nbsp;
+                        <label for="localidad"></label>(*) Localidad:&nbsp;
+                       
+                        <input type="text" name="localidad" id="localidad" placeholder="Localidad">
+                    
+                    </div>
+                    <div> <br>
+                        <label for="fechaNacimiento"><strong>(*) Fecha nacimiento</strong></label><br>
+                        <input type="date" name="fechaNacimiento" id="fechaNacimiento"  required="">
+                    </div>
+                    <div> <br>
+                        <label for="fechaIngresoRotiseria"><strong>(*) Fecha en la que ingreso a la rotiseria</strong></label>
+                        <input type="date" name="fechaIngresoRotiseria" id="fechaIngresoRotiseria" required="">
+                    </div>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Informacion adicional del cadete</strong></legend>
+
+                    <div>
+                        <label for="vigenciaCarnet">Vigencia del Carnet</label>
+                        <br>
+                        <input type="date" name="vigenciaCarnet" id="vigenciaCarnet">
+                    </div>
+                    <div> <br>
+                        <label for="patenteCadete">Datos de la patente</label> <br>
+                        <input type="text" name="patenteCadete" id="patenteCadete" size="20" maxlength="20" placeholder="Patente">
+
+                    </div>
+                    <div>
+                        <br>
+                        <label for="codigoZona">Codigo de la Zona</label> <br>
+                        <input type="number" name="codigoZona" id="codigoZona" placeholder="Codigo de la zona">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div>
+            <br>
+            <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
+            <input type="submit" name="guarda" value="Guardar">  &nbsp;
+            <input type="reset" name="reset" value="Cancelar">
+        </div>
+        <footer>
+            <div>
+                <small>Rositeria EL MEJOR SABOR 2022</small> <br>
+                <small>Todos los derechos reservados</small>
+            </div>
+            <div>
+                <nav class="menuEnlace">
+                    <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Sobre nosotros</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+        </footer>
+    </body>
+</html>

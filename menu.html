@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Sistema de Registro de menu</h1>
+                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
+                <br>
+            </div>
+        </header>
+        <div>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend><strong>Datos del menu</strong></legend>
+                    <div>
+                        <label for="codigoMenu">(*) Codigo del Menu:</label> <br>
+                        <input type="number" name="codigoMenu" id="codigoMenu" placeholder="Codigo" required="">
+                    </div>
+                    <div>
+                        <br> 
+                        <label for="nombreMenu">(*) Nombre del menu:</label><br>
+                        <input type="text" name="nombreMenu" id="nombreMenu" size="30" maxlength="30" placeholder="Nombre"
+                        required="">
+                    </div>
+                    <div>
+                        <br>
+                        <label for="descripcionMenu">Descripcion del menu</label> <br>
+                        <textarea name="descripcionMenu" id="descripcionMenu" cols="30" rows="10" placeholder="Ingrese la Descripcion del menu"></textarea>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="tipoMenu">(*) Tipo de Menu:</label>
+                        <select name="tipoMenu" id="tipoMenu" >
+                            <option value="1">Entrada</option>
+                            <option value="2">Plato principal</option>
+                            <option value="3">Postre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="precioMenu">(*) Precio del menu</label>
+                        <input type="number" name="precioMenu" id="precioMenu" placeholder="Ejemplo: 5000">
+                    </div>
+                    <div>
+                        <br>
+                        <label for="vigente">El menu esta vigente</label>
+                        <input type="checkbox" name="vigente" id="vigente">
+                    </div>
+                    <div>
+                        <br>
+                        <label for="tipoComida">(*) Tipo de comida: </label>
+                        <select name="tipoComida" id="tipoComida" >
+                            <option value="1">Normal</option>
+                            <option value="2">Vegetariano</option>
+                            <option value="3">Celiaco</option>
+                            <option value="4">Diabetico</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <br>
+            <small><strong>Recordar revisar todos los campos antes de guardar</strong></small> <br> <br>
+            <input type="submit" name="guarda" value="Guardar">  &nbsp;
+            <input type="reset" name="reset" value="Cancelar">
+        </div>
+
+        <footer>
+            <div>
+                <br>
+                <small>Rositeria EL MEJOR SABOR 2022</small> <br>
+                <small>Todos los derechos reservados</small>
+            </div>
+            <div>
+                <nav class="menuEnlace">
+                    <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Sobre nosotros</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>

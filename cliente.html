@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cliente</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Sistema de Gestión de Clientes</h1>
+                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
+                <br>
+            </div>
+        </header>
+
+        <div>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend><strong>Informacion del cliente</strong></legend>
+                    <div>
+                        <label for="cuilCadete"><strong>(*) Cuil</strong></label>
+                        <br>
+                        <input type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="">
+                    </div>
+                    <div>
+                        
+                        <h4><strong>(*) Apellido y nombre</strong></h4>
+                        <label for="nombre">Nombre:</label> &nbsp;
+                        
+                        <input type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" required="">&nbsp;&nbsp;
+                        <label for="apellido">Apellido:</label> &nbsp;
+                        <input type="text" name="apellido" id="apellido" size="50" maxlength="50" placeholder="Apellido" required="">
+                    </div>
+                    
+                    <div> 
+                        <h4><strong>Domicilio</strong></h4>
+                        <label for="calle"></label>(*) Calle: <br>&nbsp;
+                         
+                        <input type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle">&nbsp;&nbsp;
+                        <label for="domicilioNumero"></label>(*) Numero:&nbsp; 
+                         
+                        <input type="number" name="domicilioNumero" id="domicilioNumero" placeholder="Numero" required=""> <br> <br>
+                        <label for="domicilioBarrio"></label>(*) Barrio: &nbsp;
+                        <input type="text" name="domicilioBarrio" id="domicilioBarrio" placeholder="Barrio" required="">&nbsp; 
+                         
+
+                        <label for="localidad"></label>(*) Localidad:&nbsp;
+                        <input type="text" name="localidad" id="localidad" placeholder="Localidad">
+
+                        <br>
+                        <label for="observacion">Observacion:</label> <br> 
+                        <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Ingrese la observacion"></textarea>
+                    
+                    </div>
+                    <div>
+                        <label for="codigoZona">Zona:</label> 
+                        <select name="codigoZona" id="codigoZona" >
+                            <option value="1">Norte</option>
+                            <option value="2">Sur</option>
+                            <option value="3">Este</option>
+                            <option value="4">Oeste</option>
+                        </select>
+                    </div>
+                    <div>
+                        
+                        <h4><strong>(*) Telefono</strong></h4>
+                        <label for="telefonoCliente">Telefono:</label> 
+                        <input type="tel" name="telefonoCliente" id="telefonoCliente" placeholder="Telefono" required="">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <br>
+            <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
+            <input type="submit" name="guarda" value="Guardar">  &nbsp;
+            <input type="reset" name="reset" value="Cancelar">
+        </div>
+
+        <footer>
+            <div>
+                <small>Rositeria EL MEJOR SABOR 2022</small> <br>
+                <small>Todos los derechos reservados</small>
+            </div>
+            <div>
+                <nav class="menuEnlace">
+                    <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Sobre nosotros</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>
