@@ -38,7 +38,7 @@
                         <h4><strong>Domicilio</strong></h4>
                         <label for="calle"></label>(*) Calle: <br>&nbsp;
                          
-                        <input type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle">&nbsp;&nbsp;
+                        <input type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle" required="">&nbsp;&nbsp;
                         <label for="domicilioNumero"></label>(*) Numero:&nbsp; 
                          
                         <input type="number" name="domicilioNumero" id="domicilioNumero" placeholder="Numero" required=""> <br> <br>
@@ -47,14 +47,15 @@
                          
 
                         <label for="localidad"></label>(*) Localidad:&nbsp;
-                        <input type="text" name="localidad" id="localidad" placeholder="Localidad">
+                        <input type="text" name="localidad" id="localidad" placeholder="Localidad" required="">
 
-                        <br>
+                        <br> <br>
                         <label for="observacion">Observacion:</label> <br> 
                         <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Ingrese la observacion"></textarea>
                     
                     </div>
                     <div>
+                        <br>
                         <label for="codigoZona">Zona:</label> 
                         <select name="codigoZona" id="codigoZona" >
                             <option value="1">Norte</option>
