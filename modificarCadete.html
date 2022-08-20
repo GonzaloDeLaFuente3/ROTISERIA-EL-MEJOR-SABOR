@@ -1,38 +1,33 @@
-<!--CUIL, nombre completo (apellidos y nombres), 
-teléfonos  (fijo  y  celular),  domicilio  (calle,  número,  localidad,  departamento),  fecha  de 
-nacimiento, fecha en la que ingresó a trabajar a la rotisería. De los cadetes que entregan los 
-pedidos también se guarda información de la  de su carnet de conductor, patente 
-del vehículo y código de zona de entregas asignada.-->
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadete</title>
-        <link rel="icon" href="Imagenes/moto.jpg">
+        <title>Modificar Cadete</title>
+        <link rel="icon" href="Resources/ModificarCadeteIcon.png">
     </head>
     <body>
         <header>
-            <div>
-                <h1>Sistema de Registro de cadetes</h1>
+            <section>
+                <h1>Sistema de Modificación de cadetes</h1>
                 <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
                 <br>
-            </div>
+            </section>
         </header>
-        <div>
-            <img src="Imagenes/repartidor.jpg" alt="Imagen de un repartidor" title="repartidor">
-        </div>
-        <div>
+        <section>
+            <img src="Resources/modificarRepartidor.jpg" alt="Imagen de un repartidor" title="repartidor">
+        </section>
+        <section>
             <form action="#" method="post" autocomplete="on">
                 <fieldset>
-                    <legend><strong>Informacion para completar el resgistro</strong></legend>
-                    <div>
+                    <legend><strong>Informacion a Modificar</strong></legend>
+                    <section>
                         <label for="cuilCadete"><strong>(*) Cuil</strong></label>
                         <br>
                         <input type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="">
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         
                         <h4><strong>(*) Apellido y nombre</strong></h4>
                         <label for="nombre">Nombre:</label> &nbsp;
@@ -40,8 +35,8 @@ del vehículo y código de zona de entregas asignada.-->
                         <input type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" required="">&nbsp;&nbsp;
                         <label for="apellido">Apellido:</label> &nbsp;
                         <input type="text" name="apellido" id="apellido" size="50" maxlength="50" placeholder="Apellido" required="">
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         
                         <h4><strong>Numeros de Telefonos</strong></h4>
                         <label for="telefonoFijo"> Telefono fijo:</label>&nbsp;
@@ -50,8 +45,8 @@ del vehículo y código de zona de entregas asignada.-->
                         <label for="telefonoCelular">(*) Telefono celular:</label>&nbsp;
                         
                         <input type="tel" name="telefonoCelular" id="telefonoCelular" placeholder="Telefono celular" required="">
-                    </div>
-                    <div> 
+                    </section>
+                    <section> 
                         <h4><strong>Domicilio</strong></h4>
                         <label for="calle"></label>(*) Calle: <br>&nbsp;
                          
@@ -66,59 +61,60 @@ del vehículo y código de zona de entregas asignada.-->
                        
                         <input type="text" name="localidad" id="localidad" placeholder="Localidad" required="">
                     
-                    </div>
-                    <div> <br>
+                    </section>
+                    <section> <br>
                         <label for="fechaNacimiento"><strong>(*) Fecha nacimiento</strong></label><br>
                         <input type="date" name="fechaNacimiento" id="fechaNacimiento"  required="">
-                    </div>
-                    <div> <br>
+                    </section>
+                    <section> <br>
                         <label for="fechaIngresoRotiseria"><strong>(*) Fecha en la que ingreso a la rotiseria</strong></label>
                         <input type="date" name="fechaIngresoRotiseria" id="fechaIngresoRotiseria" required="">
-                    </div>
+                    </section>
                     
                 </fieldset>
                 <fieldset>
                     <legend><strong>Informacion adicional del cadete</strong></legend>
 
-                    <div>
+                    <section>
                         <label for="vigenciaCarnet">Vigencia del Carnet</label>
                         <br>
                         <input type="date" name="vigenciaCarnet" id="vigenciaCarnet">
-                    </div>
-                    <div> <br>
+                    </section>
+                    <section> <br>
                         <label for="patenteCadete">Datos de la patente</label> <br>
                         <input type="text" name="patenteCadete" id="patenteCadete" size="20" maxlength="20" placeholder="Patente">
 
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <br>
                         <label for="codigoZona">Codigo de la Zona</label> <br>
                         <input type="number" name="codigoZona" id="codigoZona" placeholder="Codigo de la zona">
-                    </div>
+                    </section>
                 </fieldset>
             </form>
-        </div>
+        </section>
 
-        <div>
+        <section>
             <br>
             <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
-            <input type="submit" name="guarda" value="Guardar">  &nbsp;
+            <input type="submit" name="modificar" value="Modificar">  &nbsp;
             <input type="reset" name="reset" value="Cancelar">
-        </div>
+        </section>
         <footer>
-            <div>
+            <section>
                 <small>Rositeria EL MEJOR SABOR 2022</small> <br>
                 <small>Todos los derechos reservados</small>
-            </div>
-            <div>
+            </section>
+            <section>
                 <nav class="menuEnlace">
                     <ul>
                       <li><a href="#">Inicio</a></li>
-                      <li><a href="#">Sobre nosotros</a></li>
+                      <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
                       <li><a href="#">Contacto</a></li>
+                      <li><a href="#">Ayuda</a></li>
                     </ul>
                 </nav>
-            </div>
+            </section>
             
             
         </footer>
