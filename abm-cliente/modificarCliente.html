@@ -9,27 +9,25 @@
     </head>
     <body>
         <header>
-            <section>
+            <div>
                 <h1>Sistema de Modificación de Clientes</h1>
                 <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
                 <br>
-            </section>
+                <img src="../Resources/ImagenesCliente//modificarCliente.jpg" alt="Imagen de modificar cliente" title="cliente">
+            </div>
         </header>
-        <section>
-            <img src="../Resources/ImagenesCliente//modificarCliente.jpg" alt="Imagen de modificar cliente" title="cliente">
-
-        </section>
-        <section>
+        
+        <div>
             <form action="#" method="post" autocomplete="on">
                 <fieldset>
                     <legend><strong>Informacion del cliente a modificar</strong></legend>
-                    <section>
+                    <div>
                         <label for="cuilCadete"><strong>(*) Cuil</strong></label>
                         <br>
                         <input type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="">
-                    </section>
+                    </div>
+
                     <section>
-                        
                         <h4><strong>(*) Apellido y nombre</strong></h4>
                         <label for="nombre">Nombre:</label> &nbsp;
                         
@@ -58,7 +56,8 @@
                         <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Ingrese la observacion"></textarea>
                     
                     </section>
-                    <section>
+
+                    <div>
                         <br>
                         <label for="codigoZona">Zona:</label> 
                         <select name="codigoZona" id="codigoZona" >
@@ -67,38 +66,40 @@
                             <option value="3">Este</option>
                             <option value="4">Oeste</option>
                         </select>
-                    </section>
+                    </div>
+
                     <section>
-                        
                         <h4><strong>(*) Telefono</strong></h4>
                         <label for="telefonoCliente">Telefono:</label> 
                         <input type="tel" name="telefonoCliente" id="telefonoCliente" placeholder="Telefono" required="">
                     </section>
                 </fieldset>
             </form>
-        </section>
+        </div>
+
+        <br>
+
         <section class="habilitar/deshabilitar">
-            <br>
             <h3>Habilitar / Deshabilitar</h3>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            
         </section>
-        <section>
+
+        <div>
             <br>
             <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
             <input type="submit" name="modificar" value="Modificar">  &nbsp;
             <input type="reset" name="reset" value="Cancelar">
-        </section>
+        </div>
 
         <footer>
-            <section>
+            <div>
                 <small>Rositeria EL MEJOR SABOR 2022</small> <br>
                 <small>Todos los derechos reservados</small>
-            </section>
-            <section>
+            </div>
+            <div>
                 <nav class="menuEnlace">
                     <ul>
                       <li><a href="../index.html">Inicio</a></li>
@@ -107,8 +108,7 @@
                       <li><a href="#">Ayuda</a></li>
                     </ul>
                 </nav>
-            </section>
-           
+            </div>
         </footer>
     </body>
 </html>

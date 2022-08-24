@@ -9,35 +9,33 @@
     </head>
     <body>
         <header>
-            <section>
+            <div>
                 <h1>Sistema de Modificación de cadetes</h1>
                 <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
                 <br>
-            </section>
+                <img src="../Resources/ImagenesCadete/modificarRepartidor.jpg" alt="Imagen de un repartidor" title="repartidor">
+            </div>
         </header>
-        <section>
-            <img src="../Resources/ImagenesCadete/modificarRepartidor.jpg" alt="Imagen de un repartidor" title="repartidor">
-        </section>
-        <section>
+        
+        <div>
             <form action="#" method="post" autocomplete="on">
                 <fieldset>
                     <legend><strong>Informacion a Modificar</strong></legend>
-                    <section>
+                    <div>
                         <label for="cuilCadete"><strong>(*) Cuil</strong></label>
                         <br>
                         <input type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="">
-                    </section>
+                    </div>
+
                     <section>
-                        
                         <h4><strong>(*) Apellido y nombre</strong></h4>
                         <label for="nombre">Nombre:</label> &nbsp;
-                        
                         <input type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" required="">&nbsp;&nbsp;
                         <label for="apellido">Apellido:</label> &nbsp;
                         <input type="text" name="apellido" id="apellido" size="50" maxlength="50" placeholder="Apellido" required="">
                     </section>
+                    
                     <section>
-                        
                         <h4><strong>Numeros de Telefonos</strong></h4>
                         <label for="telefonoFijo"> Telefono fijo:</label>&nbsp;
                         
@@ -46,6 +44,7 @@
                         
                         <input type="tel" name="telefonoCelular" id="telefonoCelular" placeholder="Telefono celular" required="">
                     </section>
+
                     <section> 
                         <h4><strong>Domicilio</strong></h4>
                         <label for="calle"></label>(*) Calle: <br>&nbsp;
@@ -62,58 +61,68 @@
                         <input type="text" name="localidad" id="localidad" placeholder="Localidad" required="">
                     
                     </section>
-                    <section> <br>
+
+                    <div>
+                        <br>
                         <label for="fechaNacimiento"><strong>(*) Fecha nacimiento</strong></label><br>
                         <input type="date" name="fechaNacimiento" id="fechaNacimiento"  required="">
-                    </section>
-                    <section> <br>
+                    </div>
+
+                    <div> 
+                        <br>
                         <label for="fechaIngresoRotiseria"><strong>(*) Fecha en la que ingreso a la rotiseria</strong></label>
                         <input type="date" name="fechaIngresoRotiseria" id="fechaIngresoRotiseria" required="">
-                    </section>
-                    
+                    </div>
                 </fieldset>
+
                 <fieldset>
                     <legend><strong>Informacion adicional del cadete</strong></legend>
 
-                    <section>
+                    <div>
                         <label for="vigenciaCarnet">Vigencia del Carnet</label>
                         <br>
                         <input type="date" name="vigenciaCarnet" id="vigenciaCarnet">
-                    </section>
-                    <section> <br>
+                    </div>
+
+                    <div>
+                        <br>
                         <label for="patenteCadete">Datos de la patente</label> <br>
                         <input type="text" name="patenteCadete" id="patenteCadete" size="20" maxlength="20" placeholder="Patente">
+                    </div>
 
-                    </section>
-                    <section>
+                    <div>
                         <br>
                         <label for="codigoZona">Codigo de la Zona</label> <br>
                         <input type="number" name="codigoZona" id="codigoZona" placeholder="Codigo de la zona">
-                    </section>
+                    </div>
                 </fieldset>
             </form>
-        </section>
+        </div>
+        
+        <br>
+
         <section class="habilitar/deshabilitar">
-            <br>
             <h3>Habilitar / Deshabilitar</h3>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            
         </section>
-        <section>
+
+        <div>
             <br>
             <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
             <input type="submit" name="modificar" value="Modificar">  &nbsp;
             <input type="reset" name="reset" value="Cancelar">
-        </section>
+        </div>
+
         <footer>
-            <section>
+            <div>
                 <small>Rositeria EL MEJOR SABOR 2022</small> <br>
                 <small>Todos los derechos reservados</small>
-            </section>
-            <section>
+            </div>
+
+            <div>
                 <nav class="menuEnlace">
                     <ul>
                       <li><a href="../index.html">Inicio</a></li>
@@ -122,9 +131,7 @@
                       <li><a href="#">Ayuda</a></li>
                     </ul>
                 </nav>
-            </section>
-            
-            
+            </div>
         </footer>
     </body>
 </html>
