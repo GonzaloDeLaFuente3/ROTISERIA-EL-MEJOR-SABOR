@@ -5,45 +5,119 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ingresar</title>
+        <link rel="icon" href="../../Template/Resources/Logos/iconRotiseria.png">
         <script src="https://kit.fontawesome.com/4697645f5f.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../Css/login.css">
     </head>
     <body>
-        <header>
-            <h1><strong>Ingresar</strong></h1>
-        </header>
-        
-        <div>
-            <form action="#" method="post" autocomplete="on">
-                <label for="usuario">Ingrese el nombre del usuario: </label> <br>
-                <i class="fa-solid fa-user"></i>
-                <input type="text" name="usuario" id="usuario" placeholder="Nombre" required="">
-                <br><br>
-                <label for="password">Contraseña:</label> <br>
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" id="password" required="" placeholder="Contraseña">
-                <br><br>
-                <a href="#">¿Olvido su contraseña?</a>
-                <br><br>
-                <a href="../abm-cliente/altaCliente.html">Crea una cuenta</a>
-                <button id="botonLogin">Iniciar</button>
-                <input type="reset" name="reset" value="Cancelar">
-            </form>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-6 my-5 imagen">
+                    
+                </div>
+                <div class="col-6 my-5 columna-2">
+                    <header>
+                        <h1 class="text-center "><strong>Ingresar</strong></h1>
+                    </header>
+                    <form action="#" method="post" autocomplete="on">
+                        <label class="form-label" for="usuario">Ingrese el nombre del usuario: </label> <br>
+                        <div class="row ">
+                            <div class="col-1">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="col-11">
+                                <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Nombre" required="">
+                                <br><br>
+                            </div>
+                        </div>
+                        <label class="form-label" for="password">Contraseña:</label> <br>
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="col-11">
+                                <input class="form-control" type="password" name="password" id="password" required="" placeholder="Contraseña">
+                                 <br><br>
+                            </div>
+                        </div>
+                       
+                        
+                        
+                        <a href="#">¿Olvido su contraseña?</a>
+                        <br><br>
+                        <a href="../abm-cliente/altaCliente.html">Crea una cuenta</a>
+                        <div class="d-grid my-3">
+                            <button class="btn btn-primary" id="botonLogin">Iniciar</button>
+                            
+                        </div>
+                        <div class="d-grid my-3">
+                            
+                            <input class="btn btn-secondary" type="reset" name="reset" value="Cancelar">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center my-2">
+                                Iniciar sesion con:
+                            </div>
+                        </div>
+                        <div class="row my-1">
+                            <div class="col">
+                                <button class="btn btn-outline-primary  w-100 my-1">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <img src="../Resources/Logos/icons8-facebook-48.png" width="32" alt="facebook">
+                                        </div>
+                                        <div class="col-10 text-center" >
+                                            Facebook
+                                        </div>
+                                    </div>
+
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-outline-danger  w-100 my-1">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <img src="../Resources/Logos/icons8-logo-de-google-48.png" width="32" alt="facebook">
+                                        </div>
+                                        <div class="col-10 text-center" >
+                                            Google
+                                        </div>
+                                    </div>
+
+                                </button>
+                            </div>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
         </div>
+        
+        
 
         <footer>
             <br><br>
             <div>
-                <nav class="menuEnlace">
-                    <ul>
-                      <li><a href="../index.html">Inicio</a></li>
-                      <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-                      <li><a href="contacto.html">Contacto</a></li>
-                      <li><a href="ayuda.html">Ayuda</a></li>
+                <nav class="navbar navbar-dark bg-dark">
+                    <ul class="breadcrumb">
+                      <li>
+                            <img src="../Resources/Logos/iconRotiseria.png" alt="logo rotiseria" width="30" height="24" class="d-inline-block align-text-top mx-3">
+                          
+                      </li>  
+                      <li><a class="navbar-brand" href="../index.html">Inicio</a></li>
+                      <li><a class="navbar-brand" href="sobreNosotros.html">Sobre nosotros</a></li>
+                      <li><a class="navbar-brand" href="contacto.html">Contacto</a></li>
+                      <li><a class="navbar-brand" href="ayuda.html">Ayuda</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div>
+            <div class="text-bg-dark p-3  text-center">
                 <small>Rositeria EL MEJOR SABOR 2022</small> <br>
                 <small>Todos los derechos reservados</small>
             </div>

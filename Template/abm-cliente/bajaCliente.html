@@ -6,52 +6,102 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Eliminar Cliente</title>
         <link rel="icon" href="../Resources/ImagenesCliente/eliminarClienteIcon.jpg">
+        <link rel="icon" href="../Resources/ImagenesCliente/iconCliente.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../Css/cliente.css"> 
     </head>
     <body>
-        <header>
-            <h1><strong>Sistema de Baja de Clientes</strong>      </h1>
-            <img src="../Resources/ImagenesCliente/eliminarCliente.jpg" alt="Imagen de eliminar cliente" title="eliminar cliente">
-        </header>
-
-        <div>
-            <br>
-            <label for="buscarCliente">Buscar cliente a eliminar: </label>
-            <input type="number" name="buscarCliente" id="buscarCliente" placeholder="Cuil del Cliente" required="">
-            <button id="botonBuscar">Buscar</button>
+        <div class="jumbotron text-center my-3 contenedorTitulo" style="margin-bottom:0" >
+            <header>
+                <h1 class="text-center"><strong>Sistema de Baja de Clientes</strong>      </h1>
+                
+            </header>
         </div>
-
-        <section>
-            <h3>Informacion del cliente a eliminar</h3>
-            <br>
-            <table>
-                <tr>
-                    <th>Cuil</th>
-                    <th>Apellido</th>
-                    <th>Nombre</th>
-                    <th>Telefono</th>
-                </tr>
-            </table>
-        </section>
-
-        <div>
-            <br><br>
-            <button id="botonEliminar">Eliminar</button>
-            <input type="reset" name="reset" value="Cancelar">
+       
+        <div class="container my-5">
+            
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="../Resources/ImagenesCliente/eliminarCliente.jpg" alt="Imagen de eliminar cliente" title="eliminar cliente" width="45px">
+                            </div>
+                            <div class="col-11">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label class="col-form-label" for="buscarCliente">Buscar cliente a eliminar: </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="number" name="buscarCliente" id="buscarCliente" placeholder="Cuil del Cliente" required="">
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-primary" id="botonBuscar">Buscar</button>
+                                    </div>
+                                </div>
+                                
+                            
+                            
+                            </div>
+                            <br><br>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                
+            
+            <div class="container">
+                
+                <section class="card my-5" >
+                <div class="card-body">
+                    <h3 class="card-header text-white bg-primary mb-3 text-center">Informacion del cliente a eliminar</h3>
+                    <br>
+                    <div class="position-relative">
+                        <table class="table table-striped ">
+                            <tr class="table-primary">
+                                <th>Cuil</th>
+                                <th>Apellido</th>
+                                <th>Nombre</th>
+                                <th>Telefono</th>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div>
+                        <br><br>
+                        <button class="btn btn-primary" id="botonEliminar">Eliminar</button>
+                        <input class="btn btn-secondary" type="reset" name="reset" value="Cancelar">
+                    </div>
+                </div>
+                </section>
+                
+        
+                
+            </div>
+                    
         </div>
+                        
 
         <footer>
             <br>
             <div>
-                <nav class="menuEnlace">
-                    <ul>
-                      <li><a href="../index.html">Inicio</a></li>
-                      <li><a href="../navegacion/sobreNosotros.html">Sobre nosotros</a></li>
-                      <li><a href="../navegacion/contacto.html">Contacto</a></li>
-                      <li><a href="../navegacion/ayuda.html">Ayuda</a></li>
+                <nav class="navbar navbar-dark bg-dark">
+                    <ul class="breadcrumb">
+                        <li>
+                            <img src="../Resources/Logos/iconRotiseria.png" alt="logo rotiseria" width="30" height="24" class="d-inline-block align-text-top mx-3">
+                          
+                      </li>
+                      <li><a class="navbar-brand" href="../index.html">Inicio</a></li>
+                      <li><a class="navbar-brand" href="../navegacion/sobreNosotros.html">Sobre nosotros</a></li>
+                      <li><a class="navbar-brand" href="../navegacion/contacto.html">Contacto</a></li>
+                      <li><a class="navbar-brand" href="../navegacion/ayuda.html">Ayuda</a></li>
                     </ul>
                 </nav>
             </div>
-            <div>
+            <div class="text-bg-dark p-3 text-center">
                 <small>Rositeria EL MEJOR SABOR 2022</small> <br>
                 <small>Todos los derechos reservados</small>
             </div>

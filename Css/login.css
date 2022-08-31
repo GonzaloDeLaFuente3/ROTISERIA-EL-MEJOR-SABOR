@@ -1,0 +1,16 @@
+.imagen{
+    background-image: url(../Template/Resources/Logos/iconRotiseria.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+body{
+    background-color: #83C5BE;
+}
+
+.container {
+    background-color: #EDF6F9
+}
+.columna-2{
+    background-color: #EDF6F9;
+}

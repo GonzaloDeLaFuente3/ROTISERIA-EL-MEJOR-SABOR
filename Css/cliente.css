@@ -1,0 +1,23 @@
+textarea {
+    
+        resize:none;
+        
+    
+}
+.contenedorTitulo {
+        background-color: #83C5BE;
+        color: #ffff;
+}
+body {
+        background-color:  #83C5BE;
+}
+.centrado {
+        text-align: center;
+        vertical-align: middle;
+}
+.noSaltoLinea{
+        display:inline;
+}
+h1,h4,h5{
+        border-radius: 7px;
+    }
