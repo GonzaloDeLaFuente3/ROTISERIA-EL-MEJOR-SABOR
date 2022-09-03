@@ -59,7 +59,8 @@ footer{
   body {
     align-items: center;
     justify-content: center;
-    margin-top: 10rem;
+    background-color: #EDF6F9;
+    margin-top: 4.3rem;
   }
 
 #titulo{
@@ -83,8 +84,8 @@ hr{
 
 /*-------BOTONES ENCABEZADO---------------*/
 .buscador{
-  margin-inline: 4rem;
-  padding-inline: 3rem;
+  margin-right: 4rem;
+  padding-right: 3rem;
 }
 
 .notificaciones{
@@ -106,4 +107,104 @@ hr{
   width: 55px;
   margin-right: 2rem;
   margin-left: 2rem;
+}
+
+#cajaMenu{
+  font-family: thewestgate;
+  font-size: 6rem;
+  margin: auto;
+  background-color: #83C5BE;
+  color: #006D77;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  user-select: none;
+}
+
+
+
+/*-----------------SWIPER---------------*/
+
+/*SWIPER NEX, PREV*/
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: violet;
+  transition: all 0.3s ease;
+  margin-bottom: 4rem;
+}
+
+
+/*SWIPER NEXT, PREV, HOVER*/
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: violet;
+}
+
+/*SWIPER BULLETS*/
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+}
+
+/*DIMENSIONES DE LOS SWIPERS DE MENUS*/
+.swiper{
+  width: 875px;
+  height: 430px;
+}
+
+/*PANEL MENUS*/
+.panelMenus{
+  margin: auto;
+  text-align: center;
+  background-color: #83C5BE;
+  height: 580px;
+  width: 91%;
+  border-radius: 2rem;
+  margin-bottom: 7rem;
+  padding-bottom: 4rem;
+}
+
+/*PROPIEDADES TARJETA*/
+.card,.card-img-top{
+  border-radius: 1rem;
+}
+
+/*COMPRAR Y AÑADIR CARRITO PADDING*/
+.p-4{
+  padding: 0.3rem!important;
+  height: 10rem;
+}
+
+.circulo{
+  background-color: #006D77;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+.btn-outline {
+  color: #EDF6F9;
+  border-color: #EDF6F9;
+}
+
+.btn-outline-success{
+  margin-block: 0.7rem;
+}
+
+.btn-outline:hover{
+  transition: background-color .5s;
+  background-color: #EDF6F9;
+
+}
+
+
+.menusComprados{
+  border-radius: 0.5rem;
+  height: 8rem;
+  color: white;
+  background-color: #006D77;
 }
