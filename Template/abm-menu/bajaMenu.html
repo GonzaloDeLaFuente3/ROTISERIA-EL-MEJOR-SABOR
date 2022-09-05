@@ -9,6 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../Css/menu.css">
         <link rel="stylesheet" href="../../css/header-footer.css">
     </head>
     <body>
@@ -23,38 +24,9 @@
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="../../Template/index.html">Inicio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menús</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#entrada">Todos los menús</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="#labelMenu">Entrada de mesa</a></li>
-                                    <li><a class="dropdown-item" href="#platoprincipal">Plato Principal</a></li>
-                                    <li><a class="dropdown-item" href="#postre">Postre</a></li>
-                                </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menús</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#entrada">Todos los menús</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="#labelMenu">Entrada de mesa</a></li>
-                                    <li><a class="dropdown-item" href="#platoprincipal">Plato Principal</a></li>
-                                    <li><a class="dropdown-item" href="#postre">Postre</a></li>
-                                </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menús</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#entrada">Todos los menús</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="#labelMenu">Entrada de mesa</a></li>
-                                    <li><a class="dropdown-item" href="#platoprincipal">Plato Principal</a></li>
-                                    <li><a class="dropdown-item" href="#postre">Postre</a></li>
-                                </ul>
-                        </li>
+                        
                         </ul>
                         <form class="d-flex buscador">
                         <input class="form-control me-2" type="search" placeholder="Buscar un menú" aria-label="Search">
@@ -83,51 +55,81 @@
                                 Mi Cuenta
                             </button>   
                             <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="navegacion/login.html">Ingresar</a>
-                                <a class="dropdown-item" href="abm-cliente/altaCliente.html">Registrarse</a>
+                                <a class="dropdown-item" href="../navegacion/login.html">Ingresar</a>
+                                <a class="dropdown-item" href="../abm-cliente/altaCliente.html">Registrarse</a>
                                 <hr class="dropdown-divider" />
                                 <a class="dropdown-item" href="#">Configuración</a>
-                                <a class="dropdown-item" href="index.html">Salir</a>
+                                <a class="dropdown-item" href="../../Template/index.html">Salir</a>
                             </div>
                         </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <h1><strong>Sistema de Baja de Menu</strong>      </h1>
-            <img src="../Resources/ImagenesMenu/eliminarMenu.png" alt="Imagen de eliminar Menu" title="eliminar Menu">
+            <h1 class="text-center titulo"><strong>Sistema de Baja de Menu</strong>      </h1>
+            
         </header>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="../Resources/ImagenesMenu/eliminarMenu.png" alt="Imagen de eliminar Menu" title="eliminar Menu " width="45px">
+                        </div>
+                        <div class="col-11">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="col-form-label" for="buscarMenu">Buscar menu a eliminar: </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="number" name="buscarMenu" id="buscarMenu" placeholder="Codigo del menu" required="">
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-warning" id="botonBuscar">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <section class="card my-5">
+                    <div class="card-body">
+                        <h3 class="card-header text-black bg-warning mb-3 text-center">Informacion del menu a eliminar</h3>
+                    <br>
+                    <div class="position-relative">
+                        <table  class="table table-striped ">
+                            <tr class="table-warning">
+                                <th>Codigo</th>
+                                
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Tipo de menu</th>
+                                <th>Tipo de comida</th>
+                                <th>Precio</th>
+                                
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+                    <div>
+                        <br><br>
+                        <button class="btn btn-warning" id="botonEliminar">Eliminar</button>
+                        <input class="btn btn-secondary" type="reset" name="reset" value="Cancelar">
+                    </div>
+                    </div>
+                    
+                </section>
         
-        <div>
-            <br>
-            <label for="buscarMenu">Buscar menu a eliminar: </label>
-            <input type="number" name="buscarMenu" id="buscarMenu" placeholder="Codigo del menu" required="">
-            <button id="botonBuscar">Buscar</button>
+                
+            </div>
+            
+    
+
         </div>
-
-        <section>
-            <h3>Informacion del menu a eliminar</h3>
-            <br>
-            <table>
-                <tr>
-                    <th>Codigo</th>
-                    
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Tipo de menu</th>
-                    <th>Tipo de comida</th>
-                    <th>Precio</th>
-                    
-                </tr>
-            </table>
-        </section>
-
-        <div>
-            <br><br>
-            <button id="botonEliminar">Eliminar</button>
-            <input type="reset" name="reset" value="Cancelar">
-        </div>
-
+        
         <footer>
             <br>
             <div>
