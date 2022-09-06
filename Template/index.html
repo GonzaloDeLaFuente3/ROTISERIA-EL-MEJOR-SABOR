@@ -11,13 +11,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        
         <link rel="stylesheet" href="../css/header-footer.css">
         <link href="../css/index.css" rel="stylesheet">
     </head>
     <body>
         <header>
             <!--ENCABEZADO DE NAVEGACION-->
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top col-primary">
+            <nav class="navbar navbar-lg navbar-light fixed-top col-primary">
                 <div class="container-fluid">
                     <a href="index.html">
                     <img src="Resources/Logos/rotiseria.png" alt="icono principal" id="logo"/>
@@ -26,26 +27,27 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menús</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#entrada">Todos los menús</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="#labelMenu">Entrada de mesa</a></li>
-                                    <li><a class="dropdown-item" href="#platoprincipal">Plato Principal</a></li>
-                                    <li><a class="dropdown-item" href="#postre">Postre</a></li>
-                                </ul>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menús</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#entrada">Todos los menús</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#labelMenu">Entrada de mesa</a></li>
+                                        <li><a class="dropdown-item" href="#platoprincipal">Plato Principal</a></li>
+                                        <li><a class="dropdown-item" href="#postre">Postre</a></li>
+                                    </ul>
+                            </li>
+                            <form class="d-flex buscador">
+                                <input class="form-control me-2" type="search" placeholder="Buscar un menú" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
                         </ul>
-                        <form class="d-flex buscador">
-                        <input class="form-control me-2" type="search" placeholder="Buscar un menú" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                        </form>
+                        
                         <form class="d-flex notificaciones">
                         <button class="btn btn-outline-light" type="submit">
                             <i class="bi bi-bell-fill"></i>
@@ -78,70 +80,73 @@
                     </div>
                 </div>
             </nav>
+    
         </header>
 
         <!--PROMOCIONES-->
         <div class="container-fluid" id="promociones">
             <div class="container">
                 <main>
-                    <img src="Resources/Logos/titulo.png" id="titulo" alt="titulo_rotiseria">
+                    <div id="titulo">
+                        <img src="Resources/Logos/titulo.png"  alt="titulo_rotiseria">
+                    </div>
                     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="Resources/Promos/1.jpg" alt="Img. 1">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="Resources/Promos/1.jpg" alt="Img. 1">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+                                </div>
                             </div>
-                        </div>
-                        </div>
-    
-                        <div class="carousel-item">
-                        <img src="Resources/Promos/2.jpg" alt="Img. 2">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
                             </div>
-                        </div>
-                        </div>
-    
-                        <div class="carousel-item">
-                        <img src="Resources/Promos/4.jpg" alt="Img. 4">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+        
+                            <div class="carousel-item">
+                            <img src="Resources/Promos/2.jpg" alt="Img. 2">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+                                </div>
                             </div>
-                        </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                        <img src="Resources/Promos/3.jpg" alt="Img. 3">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            <p><a class="btn btn-lg btn-primary" href="#medallones">Ver más</a></p>
                             </div>
+        
+                            <div class="carousel-item">
+                            <img src="Resources/Promos/4.jpg" alt="Img. 4">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                            <img src="Resources/Promos/3.jpg" alt="Img. 3">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                <p><a class="btn btn-lg btn-primary" href="#medallones">Ver más</a></p>
+                                </div>
+                            </div>
+                            </div>
+                            
                         </div>
-                        </div>
-                        
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                        <div class="circulo">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </div>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                        <div class="circulo">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </div>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                            <div class="circulo">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </div>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                            <div class="circulo">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </div>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
                 </main>
             </div>
@@ -155,10 +160,10 @@
                 <h1>Nuestros Menús</h1>
             </div>
 
-            <section class="panelMenus" id="entrada">
+            <section class="panelMenus swiper mySwiper" id="entrada">
                 <br>
                 <h2 id="labelMenus">Entradas de mesa</h2>
-                <div class="swiper mySwiper container">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper content">
                         <div class="swiper-slide card h-100">
                             <img class="card-img-top" src="https://vinomanos.com/wp-content/uploads/2020/07/Tarta-de-choclo.jpg" alt="Tarta de choclo" />
@@ -243,15 +248,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </section>
-            <section class="panelMenus" id="platoprincipal">
+            <section class="panelMenus swiper mySwiper" id="platoprincipal">
                 <br>
                 <h2 id="labelMenus">Platos principales</h2>
-                <div class="swiper mySwiper container">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper content">
                         <div class="swiper-slide card h-100">
                             <img class="card-img-top" src="https://cocinacriolla.com.ar/wp-content/uploads/2020/07/Pollo-al-verdeo.jpg" alt="Pollo al verdeo" />
@@ -334,15 +338,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </section>
-            <section class="panelMenus" id="postre">
+            <section class="panelMenus swiper mySwiper" id="postre">
                 <br>
                 <h2 id="labelMenus">Postres</h2>
-                <div class="swiper mySwiper container">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper content">
                         <div class="swiper-slide card h-100">
                             <img class="card-img-top" src="https://www.comedera.com/wp-content/uploads/2022/04/Helado-de-chocolate-sin-azucar-casero-shutterstock_1418765711.jpg" alt="helado de chocolate" />
@@ -425,13 +428,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </section>
             <br>
         </div>
+
+        <!-- Footer-->
+        <!--<footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>-->
+        
+
 
         <footer>
             <br>
@@ -455,5 +464,6 @@
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/sliderMenu.js"></script>
+
     </body>
 </html>
