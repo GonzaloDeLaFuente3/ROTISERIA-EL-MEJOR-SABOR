@@ -1,10 +1,17 @@
+@font-face {
+    font-family: thewestgate;
+    src: url(../Template/Resources/The\ West\ Gate.ttf) format('truetype');
+}
+
 /*-----------------HEADER---------------*/
 /*-------BOTONES ENCABEZADO---------------*/
   
 .notificaciones{
     margin-inline: 0.5rem;
 }
-  
+
+
+
 .micuenta{
     margin: 0;
     margin-right: 1rem;

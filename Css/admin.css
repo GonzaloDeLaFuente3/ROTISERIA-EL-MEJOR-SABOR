@@ -1,61 +1,10 @@
 /*FUENTE DE LETRA DEL DISEÑO*/
-@font-face {
-    font-family: thewestgate;
-    src: url(../Template/Resources/The\ West\ Gate.ttf) format('truetype');
-}
+
 
 /*-----------------LABELS---------------*/
 /*LABEL INICIO*/
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
-    color: white;
-  }
-  /*LABEL MENUS*/
-  .navbar-light .navbar-nav .nav-link{
-    color: white;
-  }
-  /*HOVER LABEL INICIO Y MENUS*/
-  .navbar-light .navbar-nav .nav-link:hover{
-    color: grey;
-  }
-  /*FOCUS MENUS*/
-  .navbar-light .navbar-nav .nav-link:focus{
-    color: grey;
-  }
-  /*LABEL FOOTER*/
-  #labelFooter{
-    color: white;
-    text-align: center;
-  }
-
-  /*CSS PIE DE PAGINA*/
-footer{
-    background-color: rgb(33,37,41);
-  }
   
-  #navFooter{
-    margin-block: 2rem;
-  }
-  
-  a{
-    color: white;
-  }
-  
-  a:hover{
-    color: grey;
-  }
-  
-  /*CSS ENCABEZADO*/
-  .col-primary{
-    background-color: rgb(0, 109, 119);
-  }
-
-  /*ICONO FOOTER*/
-#icono{
-  margin-inline: 1rem;
-  width: 40px;
-}
-
   body {
     align-items: center;
     justify-content: center;
@@ -64,8 +13,7 @@ footer{
   }
 
 #titulo{
-    font-family: thewestgate;
-    margin-inline: 13rem;
+    text-align: center;
 }
 
 /*HR AUXILIARES PARA ACOMODAR ELEMENTOS*/
@@ -82,32 +30,7 @@ hr{
   user-select: none;
 }
 
-/*-------BOTONES ENCABEZADO---------------*/
-.buscador{
-  margin-right: 4rem;
-  padding-right: 3rem;
-}
 
-.notificaciones{
-  margin-inline: 0.5rem;
-}
-
-.carrito{
-  margin-inline: 0.5rem;
-}
-.micuenta{
-  margin: 0;
-  margin-right: 1rem;
-  margin-left: 0.5rem;
-}
-
-/*----------------------------------------------*/
-
-#logo{
-  width: 55px;
-  margin-right: 2rem;
-  margin-left: 2rem;
-}
 
 #cajaMenu{
   font-family: thewestgate;
@@ -131,7 +54,6 @@ hr{
 /*SWIPER NEX, PREV*/
 .swiper-button-next, .swiper-button-prev{
   opacity: 0.7;
-  color: violet;
   transition: all 0.3s ease;
   margin-bottom: 4rem;
 }
