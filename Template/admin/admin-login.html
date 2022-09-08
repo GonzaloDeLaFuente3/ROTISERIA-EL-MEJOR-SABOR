@@ -29,8 +29,8 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Pendientes</a></li>
                                     <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="#">Agregar</a></li>
-                                    <li><a class="dropdown-item" href="#">Historial</a></li>
+                                    <li><a class="dropdown-item" href="pedido.html">Agregar</a></li>
+                                    <li><a class="dropdown-item" href="historial-pedidos.html">Historial</a></li>
                                 </ul>
                         </li>
                         <li class="nav-item">
@@ -76,9 +76,6 @@
                             Administrador
                         </button>   
                         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="navegacion/login.html">Ingresar</a>
-                            <a class="dropdown-item" href="abm-cliente/altaCliente.html">Registrarse</a>
-                            <hr class="dropdown-divider" />
                             <a class="dropdown-item" href="index.html">Salir</a>
                         </div>
                     </li>
@@ -87,89 +84,158 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <div id="titulo">
             <img src="../Resources/Logos/titulo.png" alt="titulo_rotiseria">
         </div>
         <div class="container-fluid">
             <section class="panelMenus swiper mySwiper" id="entrada">
                 <br>
-                <h2 id="labelMenus">Pedidos</h2>
+                <h2 id="labelMenus">Pedidos Pendientes</h2>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper content">
                         <div class="swiper-slide card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center menusComprados">
-                                    <h5 class="fw-bolder">Orden: </h5>
-                                    <h5 class="fw-bolder">Tarta de choclo x1</h5>
-                                    <h5 class="fw-bolder">Empanadas de pollo x5</h5>
+                                <div class="menusComprados">
+                                    <form id="formulario">
+                                        <br>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label dropdown">
+                                                <i class="bi bi-box-seam"></i>
+                                                <label for="exampleFormControlTextarea1" class="form-label dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pedido</label>
+                                                <ul class="dropdown-menu">
+                                                    <li><h6 class="text-center">Código: 13479</h6></li>
+                                                    <li><h6 class="text-center">Fecha: 07/09/2022</h6></li>
+                                                    <li><h6 class="text-center">Hora: 15:38</h6></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="textAreaMenu" rows="3" style="resize: none;" readonly>Tarta de choclo x3, Medallones de pescado x12</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-person-badge-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Cliente</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="inputA" value="Gabriel Avellaneda" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Domicilio</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="textAreaMenu" rows="3" style="resize: none;" readonly>La Carrera Fray Mamerto Esquiu</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-bag-check-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Tipo Entrega</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="inputA" value="Envío a domicilio" readonly>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                        <label for="exampleInputPassword1" class="form-label">Estado:</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="inputA" value="Pendiente" readonly>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-form-label">
+                                        <i class="bi bi-clock-fill"></i>
+                                        <label for="exampleInputPassword1" class="form-label">T. demora aprox:</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="inputA" placeholder="En minutos...">
+                                    </div>
+                                </div>
+                                <br>
                                 <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Aceptar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="#">Cancelar</a></div>
                             </div>
                         </div>
                         <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.comedera.com/wp-content/uploads/2022/06/empanadas-argentinas-de-pollo.jpg" alt="Empanadas de pollo" />
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Empanadas de pollo</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1500.00 x 12u
+                                <div class="menusComprados">
+                                    <form id="formulario">
+                                        <br>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label dropdown">
+                                                <i class="bi bi-box-seam"></i>
+                                                <label for="exampleFormControlTextarea1" class="form-label dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pedido</label>
+                                                <ul class="dropdown-menu">
+                                                    <li><h6 class="text-center">Código: 42000</h6></li>
+                                                    <li><h6 class="text-center">Fecha: 26/03/2010</h6></li>
+                                                    <li><h6 class="text-center">Hora: 18:59</h6></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="textAreaMenu" rows="3" style="resize: none;" readonly>Helado de chocolate x5</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-person-badge-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Cliente</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="inputA" value="Joze Figueroa" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Domicilio</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="textAreaMenu" rows="3" style="resize: none;" readonly>Capital S.F.V.C</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3 col-form-label">
+                                                <i class="bi bi-bag-check-fill"></i>
+                                                <label for="exampleInputPassword1" class="form-label">Tipo Entrega</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="inputA" value="Retira en el local" readonly>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100" id="medallones">
-                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">PROMO</div>
-                            <img class="card-img-top" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/128/906/products/89678_33d09052aab7e2cff59d1c0032cf77a211-771cf9b02ea3feea6915849035410505-480-0.jpg" alt="Medallones de pescado" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Medallones de pescado</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <i class="bi bi-truck"></i>
+                                        <label for="exampleInputPassword1" class="form-label">Estado:</label>
                                     </div>
-                                    <span class="text-muted text-decoration-line-through">$230 c/u</span>
-                                    $2500.00 x 12u
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.paulinacocina.net/wp-content/uploads/2020/03/pan-de-carne-800x530.jpg" alt="Pan de carne" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Pan de carne</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="inputA" value="En camino" readonly>
                                     </div>
-                                    $1500 x 12u
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-form-label">
+                                        <i class="bi bi-clock-fill"></i>
+                                        <label for="exampleInputPassword1" class="form-label">T. demora aprox:</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="inputA" placeholder="En minutos..." value="135" disabled>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="text-center"><a class="btn btn-outline-warning mt-auto disabled" href="#">En camino</a></div>
                             </div>
                         </div>
                     </div>
