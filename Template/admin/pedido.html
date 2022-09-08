@@ -76,7 +76,7 @@
                         <br>
                         <input class="form-control" type="number" name="codigoPedido" id="codigoPedido" placeholder="Ingrese el codigo del pedido" required>
                         <div class="valid-feedback">
-                            El codigo es correcto
+                            El codigo  del menú es correcto
                         </div>
                         <div class="invalid-feedback">
                             Debe ingresar un codigo
@@ -88,6 +88,13 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                                 <input class="form-control" type="date" name="fehcaPedido" id="fechaPedido"  required="">
+                                <div class="valid-feedback">
+                                    La fecha del pedido es correcta
+                                </div>
+                                <div class="invalid-feedback">
+                                    Se debe ingresar una fecha para el pedido
+        
+                                </div>
                                 <br>
                             </div>
                             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
@@ -109,6 +116,13 @@
                                 <select class="form-select" name="cliente" id="elegirCliente" required="">
                                     <option selected>Seleccione una opcion </option>
                                 </select>
+                                <div class="valid-feedback">
+                                    La seleccion del cliente es correcta
+                                </div>
+                                <div class="invalid-feedback">
+                                    Debe seleccionar un cliente 
+        
+                                </div>
                             </div>
                             <div class="col-1  my-1 text-lg-start">
                                 <a href="../abm-cliente/altaCliente.html"><i class="bi bi-person-plus-fill"></i></a>
@@ -133,6 +147,13 @@
                             <option value="5">Devuelto</option>
                             <option value="6">Cancelado</option>
                         </select>
+                        <div class="valid-feedback">
+                            La seleccion del estado del pedido es correcta
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe seleccionar un estado del pedido
+
+                        </div>
                         
                         <br>
                         <label class="col-form-label" for="comentarioPedido" >Comentario:</label> <br>
@@ -147,12 +168,25 @@
 
                             <input type="radio" name="enviarORetirar" id="retirarLocal" required="">
                             <label  for="retirarLocal">Retirar en el local</label>
+                            <div class="valid-feedback">
+                                
+                            </div>
+                            <div class="invalid-feedback">
+                                debe seleccionar una opcion 
+    
+                            </div>
                         </div>
                         
                         <br>
                         <label class="col-form-label" for="rangoHorario">(*) Rango de Horario</label>
                         <input class="form-control" type="number" name="tiempoEstimado" id="tiempoEstimado" required="">
+                        <div class="valid-feedback">
+                                El rango ingresado es correcto 
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar un rango de horario
 
+                        </div>
                         <br> <br>
                         <h5>Total a pagar del pedido es: </h5>
 
