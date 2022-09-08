@@ -9,7 +9,7 @@ textarea {
         color: #ffff;
 }
 body {
-        background-color:  #83C5BE;
+        background-color:  #EDF6F9;
 }
 .centrado {
         text-align: center;
@@ -18,10 +18,28 @@ body {
 .noSaltoLinea{
         display:inline;
 }
-h1,h4,h5{
+h4,h5{
         border-radius: 7px;
     }
-
-.titulo{
-        margin-top: 100px;
-}
+    
+#cajaMenu{
+        margin: auto;
+        width: 26rem;
+        background-color: #83C5BE;
+        border-radius: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    #titulo{
+        text-align: center;
+    }
+    
+    h1{
+        text-align: center;
+        font-family: thewestgate;
+        font-size: 3.8rem;
+        user-select: none;
+        color: #006D77;
+        margin-block: 0.5rem;
+        padding-top: 0.5rem;
+    }

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Eliminar Cliente</title>
-        <link rel="icon" href="../Resources/ImagenesCliente/eliminarClienteIcon.jpg">
+        <link rel="icon" href="../Resources/Logos/iconRotiseria.png"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
@@ -14,67 +14,51 @@
         <link rel="stylesheet" href="../../css/header-footer.css">
     </head>
     <body>
-        <div class="jumbotron text-center my-3 contenedorTitulo" style="margin-bottom:0" >
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light fixed-top col-primary">
-                    <div class="container-fluid">
-                        <a href="index.html">
-                        <img src="../Resources/Logos/rotiseria.png" alt="icono principal" id="logo"/>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top col-primary">
+                <div class="container-fluid">
+                    <a href="index.html">
+                    <img src="../Resources/Logos/rotiseria.png" alt="icono principal" id="logo"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../../Template/index.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="../admin/admin-login.html">Página Principal</a>
                             </li>
-                            
-                            </ul>
-                            <form class="d-flex buscador">
-                            <input class="form-control me-2" type="search" placeholder="Buscar un menú" aria-label="Search">
-                            <button class="btn btn-outline-light" type="submit">
-                                <i class="bi bi-search"></i>
-                            </button>
-                            </form>
-                            <form class="d-flex notificaciones">
+                        </ul>
+                        </form>
+                        <form class="d-flex notificaciones">
                             <button class="btn btn-outline-light" type="submit">
                                 <i class="bi bi-bell-fill"></i>
                                 Notificaciones
+                                <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
                             </button>
-                            </form>
-                            <form class="d-flex carrito">
-                                <button class="btn btn-outline-light" type="submit">
-                                    <i class="bi-cart-fill me-1"></i>
-                                    Carrito
-                                    <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
-                                </button>
-                            </form>
-            
-                            <ul class="navbar-nav micuenta">
-                            <li class="nav-item dropdown">
-                                <button class="btn btn-light dropdown-toggle" id="navbarDropdown" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-person-circle"></i>
-                                    Mi Cuenta
-                                </button>   
-                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="../navegacion/login.html">Ingresar</a>
-                                    <a class="dropdown-item" href="../abm-cliente/altaCliente.html">Registrarse</a>
-                                    <hr class="dropdown-divider" />
-                                    <a class="dropdown-item" href="#">Configuración</a>
-                                    <a class="dropdown-item" href="../../Template/index.html">Salir</a>
-                                </div>
-                            </li>
-                            </ul>
-                        </div>
+                        </form>
+        
+                        <ul class="navbar-nav micuenta">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-light dropdown-toggle" id="navbarDropdown" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                                Administrador
+                            </button>   
+                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../index.html">Salir</a>
+                            </div>
+                        </li>
+                        </ul>
                     </div>
-                </nav>
-                <h1 class="text-center titulo"><strong>Sistema de Baja de Clientes</strong>      </h1>
-                
-            </header>
-        </div>
+                </div>
+            </nav>
+        </header>
        
         <div class="container my-5">
-            
+            <div id="titulo">
+                <img src="../Resources/Logos/titulo.png" alt="titulo_rotiseria">
+            </div>
+            <div id="cajaMenu">
+                <h1>Eliminar un Cliente</h1>
+            </div>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -109,23 +93,41 @@
                 
                 <section class="card my-5" >
                 <div class="card-body">
-                    <h3 class="card-header text-white bg-primary mb-3 text-center">Informacion del cliente a eliminar</h3>
+                    <h3 class="card-header text-white bg-dark mb-3 text-center">Informacion del cliente a eliminar</h3>
                     <br>
                     <div class="position-relative">
                         <table class="table table-striped ">
-                            <tr class="table-primary">
+                            <tr class="table-dark">
+                                <th>Codigo</th>
                                 <th>Cuil</th>
                                 <th>Apellido</th>
                                 <th>Nombre</th>
                                 <th>Telefono</th>
                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>2043136120</td>
+                                <td>Aguero</td>
+                                <td>Kevin</td>
+                                <td>3834013782</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>1325626080</td>
+                                <td>Fuentes</td>
+                                <td>Marcos</td>
+                                <td>3834583089</td>
+                            </tr>
+                        </tbody>
                         </table>
                     </div>
                     
                     <div>
                         <br><br>
-                        <button class="btn btn-primary" id="botonEliminar">Eliminar</button>
-                        <input class="btn btn-secondary" type="reset" name="reset" value="Cancelar">
+                        <button class="btn btn-danger" id="botonEliminar">Eliminar</button>
+                        <a href="../admin/admin-login.html" type="button" class="btn btn-secondary">Cancelar</a>
                     </div>
                 </div>
                 </section>
