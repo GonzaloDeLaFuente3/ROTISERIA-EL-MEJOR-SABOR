@@ -1,9 +1,20 @@
 
-body{
-    background-color: #83C5BE;
+body {
+    background: url(../Template/Resources/Navegacion/food.jpg)  no-repeat center center fixed;
+    background-size: cover;
+  }
+
+.container-fluid{
+    align-items: center;
 }
 
-.container {
+#cajaLogin{
     background-color: #EDF6F9;
     border-radius: 15px;
+    width: 500px;
+    height: 600px;
 }
+
+#filtroFondo{
+    backdrop-filter: blur(7px);
+  }

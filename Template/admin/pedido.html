@@ -116,7 +116,7 @@
                                 <select class="form-select" name="cliente" id="elegirCliente" required="">
                                     <option selected>Seleccione una opcion </option>
                                 </select>
-                                <div class="valid-feedback">
+                                <div class="valid-feedback" >
                                     La seleccion del cliente es correcta
                                 </div>
                                 <div class="invalid-feedback">
@@ -138,8 +138,8 @@
                         
                         <br>
                         <label class="col-form-label" for="estadoPedido" >Estado del pedido</label>
-                        <select class="form-select" name="estadoPedido" id="estadoPedido" onchange="desactivarYActivarComentario(this)">
-                            <option selected>Seleccione una opcion </option>
+                        <select class="form-select is-invalid" name="estadoPedido" id="estadoPedido" aria-describedby="validationServer04Feedback" required onchange="desactivarYActivarComentario(this)">
+                            <option selected disabled>Seleccione una opcion </option>
                             <option value="1">Pendiente</option>
                             <option value="2">En preparación</option>
                             <option value="3">En camino</option>
@@ -147,7 +147,7 @@
                             <option value="5">Devuelto</option>
                             <option value="6">Cancelado</option>
                         </select>
-                        <div class="valid-feedback">
+                        <div class="valid-feedback" id="estadoPediod">
                             La seleccion del estado del pedido es correcta
                         </div>
                         <div class="invalid-feedback">
