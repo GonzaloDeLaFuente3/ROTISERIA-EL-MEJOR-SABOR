@@ -28,12 +28,19 @@
                 <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small>
                 <br><br>
                 
-                <form action="#" method="post" autocomplete="on" class="formulario" onsubmit="return validacion()">
+                <form action="#" method="post" autocomplete="on" class="formulario needs-validation" onsubmit="return validacion()" novalidate>
                     <fieldset>
                         
                         <label class="col-form-label" for="codigoPedido">(*) Codigo del pedido</label>
                         <br>
-                        <input class="form-control" type="number" name="codigoPedido" id="codigoPedido" placeholder="Ingrese el codigo del pedido" required="">
+                        <input class="form-control" type="number" name="codigoPedido" id="codigoPedido" placeholder="Ingrese el codigo del pedido" required>
+                        <div class="valid-feedback">
+                            El codigo es correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar un codigo
+
+                        </div>
                         <br>
 
                         <label class="col-form-label" for="fechaPedido">(*) Fecha del pedido </label>
@@ -75,8 +82,8 @@
 
                         
                         <br>
-                        <label class="col-form-label" for="estadoPedido">Estado del pedido</label>
-                        <select class="form-select" name="estadoPedido" id="estadoPedido">
+                        <label class="col-form-label" for="estadoPedido" >Estado del pedido</label>
+                        <select class="form-select" name="estadoPedido" id="estadoPedido" onchange="desactivarYActivarComentario(this)">
                             <option selected>Seleccione una opcion </option>
                             <option value="1">Pendiente</option>
                             <option value="2">En preparación</option>
@@ -87,8 +94,8 @@
                         </select>
                         
                         <br>
-                        <label class="col-form-label" for="comentarioPedido">Comentario:</label> <br>
-                        <textarea class="form-control" name="comentario" id="comentarioPedido" cols="30" rows="10"></textarea>
+                        <label class="col-form-label" for="comentarioPedido" >Comentario:</label> <br>
+                        <textarea class="form-control" name="comentario" id="comentarioPedido" cols="30" rows="10" ></textarea>
 
                         <br>
                         <small>El siguiente campo es obligatorio: </small>
@@ -142,4 +149,27 @@
 
 </body>
 <script src="../../js/pedido.js"></script>
+<!-- bootstrap -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 </html>

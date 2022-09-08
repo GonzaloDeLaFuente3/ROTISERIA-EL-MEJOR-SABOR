@@ -1,3 +1,4 @@
+//validar fecha, para que no pueda ser menor a la fecha actual
 function compararFecha(){
     let fechaPedido=document.getElementById("fechaPedido").value;
     let fechaActual = new Date();
@@ -34,6 +35,19 @@ function verificarFechaBoton(){
         document.getElementById("verificar").style.color="red";
     }
 }
+//mostrar para agregar comentario cuando selecciona devuelto o cancelado
+function desactivarYActivarComentario(obj){
+    if(obj.value==="5" || obj.value==="6"){
+        document.getElementById("comentarioPedido").disabled = true;
+        document.getElementById("comentarioPedido").focus();
+    }else{
+        document.getElementById("comentarioPedido").disabled = false;
+    }
+
+}
+
+
+
 function validacion(){
     retornar = false;
     if(compararFecha()===true){
@@ -43,6 +57,6 @@ function validacion(){
         return retornar;
     }
 }
-
+//validar fecha
 let boton = document.getElementById("botonVerificar");
 boton.addEventListener("click",verificarFechaBoton);
