@@ -28,7 +28,7 @@
                 <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small>
                 <br><br>
                 
-                <form action="#" method="post" autocomplete="on" class="formulario">
+                <form action="#" method="post" autocomplete="on" class="formulario" onsubmit="return validacion()">
                     <fieldset>
                         
                         <label class="col-form-label" for="codigoPedido">(*) Codigo del pedido</label>
@@ -36,8 +36,18 @@
                         <input class="form-control" type="number" name="codigoPedido" id="codigoPedido" placeholder="Ingrese el codigo del pedido" required="">
                         <br>
 
-                        <label class="col-form-label" for="fechaPedido">(*) Fecha del peddo </label>
-                        <input class="form-control" type="date" name="fehcaPedido" id="fechaPedido" required="">
+                        <label class="col-form-label" for="fechaPedido">(*) Fecha del pedido </label>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                                <input class="form-control" type="date" name="fehcaPedido" id="fechaPedido"  required="">
+                                <br>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                                <button class="btn btn-primary" id="botonVerificar" type="button" name="boton">Verificar</button>
+                            </div>
+                        </div>
+                        <p id="verificar"></p>
+                        
                         <br>
 
                         <label class="col-form-label" for="clientePedido">(*) Cliente</label>
@@ -48,7 +58,7 @@
                                 </button>
                             </div>
                             <div class="col-10 ">
-                                <select class="form-select" name="cliente" id="elegirCliente">
+                                <select class="form-select" name="cliente" id="elegirCliente" required="">
                                     <option selected>Seleccione una opcion </option>
                                 </select>
                             </div>
@@ -81,11 +91,13 @@
                         <textarea class="form-control" name="comentario" id="comentarioPedido" cols="30" rows="10"></textarea>
 
                         <br>
+                        <small>El siguiente campo es obligatorio: </small>
+                        <br>
                         <div class="radio text-center">
-                            <input   type="radio" name="enviarORetirar" id="envioDomicilio">
+                            <input   type="radio" name="enviarORetirar" id="envioDomicilio" required="">
                             <label  for="envioDomicilio">Enviar a domicilio</label>
 
-                            <input type="radio" name="enviarORetirar" id="retirarLocal">
+                            <input type="radio" name="enviarORetirar" id="retirarLocal" required="">
                             <label  for="retirarLocal">Retirar en el local</label>
                         </div>
                         
@@ -95,6 +107,11 @@
 
                         <br> <br>
                         <h5>Total a pagar del pedido es: </h5>
+
+                        <br>
+                        <small>Recordar revisar todos los campos antes de guardar</small> <br> <br>
+                        <input class="btn btn-primary" type="submit" name="guarda" value="Guardar" >  
+                        <input class="btn btn-secondary" type="reset" name="reset" value="Cancelar">
 
                     </fieldset>
                 </form>
@@ -124,4 +141,5 @@
     </footer>
 
 </body>
+<script src="/js/pedido.js"></script>
 </html>
