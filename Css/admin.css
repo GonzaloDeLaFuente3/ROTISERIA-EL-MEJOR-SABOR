@@ -38,8 +38,6 @@ hr{
   margin: auto;
   background-color: #83C5BE;
   color: #006D77;
-  width: 15rem;
-  height: 3rem;
   border-radius: 3rem;
   text-align: center;
   margin-top: 5rem;
@@ -48,43 +46,11 @@ hr{
 }
 
 
-
-/*-----------------SWIPER---------------*/
-
-/*SWIPER NEX, PREV*/
-.swiper-button-next, .swiper-button-prev{
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  margin-bottom: 4rem;
-}
-
-
-/*SWIPER NEXT, PREV, HOVER*/
-.swiper-button-next:hover, .swiper-button-prev:hover{
-  opacity: 1;
-  color: violet;
-}
-
-/*SWIPER BULLETS*/
-.swiper-pagination-bullet{
-  height: 7px;
-  width: 26px;
-  border-radius: 25px;
-}
-
-/*DIMENSIONES DE LOS SWIPERS DE MENUS*/
-.swiper{
-  width: 1100px;
-  height: 520px;
-}
-
 /*PANEL MENUS*/
 .panelMenus{
   margin: auto;
   text-align: center;
   background-color: #83C5BE;
-  height: 680px;
-  width:1200px;
   border-radius: 2rem;
   margin-bottom: 7rem;
   padding-bottom: 4rem;
@@ -134,4 +100,10 @@ hr{
 
 .row{
   align-items: center;
+}
+
+
+#tablaListado{
+  margin-inline: 1rem;
+  margin-block: 1rem;
 }
