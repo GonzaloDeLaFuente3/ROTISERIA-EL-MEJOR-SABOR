@@ -61,7 +61,7 @@
                 <section>
                     <h2 class="text-center">Bienvenido al centro de ayuda de Rotiseria El Mejor Sabor</h2>
                 </section>
-                <form action="#" method="post">
+                <form action="#" method="post" class="needs-validation" novalidate>
                     <section>
                         <h4 class="my-3">Enviar Mensaje</h4>
                         <small>Consulte los diversos inconveniente que pueda llegar a tener para brindarle la mejor ayuda 
@@ -72,7 +72,8 @@
                     <div > <br>
                         <label for="nombre" class="form-label">(*) Nombre:</label> <br>
                         <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required="" size="30" maxlength="30">
-                
+                        <div class="valid-feedback">El valor ingresado es valido</div>
+                        <div class="invalid-feedback">Ingrese un Nombre</div>
                     </div>
                     <div>
                         <br>
@@ -82,13 +83,17 @@
                     </div>
                     <div>
                         <br>
-                        <label for="correoElectronico" class="form-label">Correo Electronico</label> <br>
-                        <input class="form-control" type="email" name="correoElectronico" id="correoElectronico" placeholder="Correo Electronico">
+                        <label for="correoElectronico" class="form-label">(*) Correo Electronico</label> <br>
+                        <input class="form-control" type="email" name="correoElectronico" id="correoElectronico" placeholder="Correo Electronico" required>
+                        <div class="valid-feedback">El valor ingresado es valido</div>
+                        <div class="invalid-feedback">Ingrese un Correo Electronico</div>
                     </div>
                     <div>
                         <br>
-                        <label for="mensaje" class="form-label">Mensaje</label> <br>
-                        <textarea class="form-control" name="mensaje" id="mensaje" cols="50" rows="20"></textarea>
+                        <label for="mensaje" class="form-label">(*) Mensaje</label> <br>
+                        <textarea class="form-control" name="mensaje" id="mensaje" cols="50" rows="20" required></textarea>
+                        <div class="valid-feedback">El valor ingresado es valido</div>
+                        <div class="invalid-feedback">Ingrese un Mensaje</div>
                     </div>
                 
                     <div>
@@ -126,4 +131,5 @@
     </footer> 
 
 </body>
+<script src="../../js/validacionBootstrap.js"></script>
 </html>

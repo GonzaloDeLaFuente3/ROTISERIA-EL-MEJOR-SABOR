@@ -62,35 +62,37 @@
                 <h1>Modificar un Cliente</h1>
             </div>
             <div>
-                <form action="#" method="post" autocomplete="on">
+                <form action="#" method="post" autocomplete="on" class="needs-validation" novalidate>
                     <fieldset>
                         <section class="card">
                             <legend class="card-header text-white bg-primary mb-3"><strong>Seleccione un Cliente</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> seleccione un cliente a modificar</small> 
+                                <small><strong>Nota:</strong> seleccione un cliente a modificar.Los campos que cuentan con el simbolo (*) son obligatorios</small> 
                                 <div>
                                     <br>
-                                    <label class="col-form-label">Cliente:</label>
-                                    <select class="form-select">
-                                        <option selected>Seleccione una opcion</option>
+                                    <label class="col-form-label">(*) Cliente:</label>
+                                    <select class="form-select" required>
+                                        <option selected disabled value="">Seleccione una opcion</option>
                                         <option value="1">Aguero Kevin</option>
                                         <option value="2">Paula Rojas</option>
                                         <option value="3">Romero Paola</option>
                                     </select>
+                                    <div class="valid-feedback">El valor ingresado es valido</div>
+                                    <div class="invalid-feedback">Seleccione una opcion</div>
                                 </div>
                             </div>
                             <legend class="card-header text-white bg-primary mb-3"><strong>Informacion del cliente a modificar</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small><br>
+                                
                                 <div>
-                                    <label class="col-form-label" for="cuilCadete"><strong>(*) Cuil</strong></label>
+                                    <label class="col-form-label" for="cuilCadete"><strong>Cuil</strong></label>
                                     <br>
                                     <input class="form-control" type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" disabled>
                                     <br>
                                 </div>
     
                                 <section>
-                                    <h4 class="card-header text-white bg-primary mb-3" ><strong>(*) Apellido y nombre</strong></h4>
+                                    <h4 class="card-header text-white bg-primary mb-3" ><strong>Apellido y nombre</strong></h4>
                                     <label class="col-form-label" for="nombre">Nombre:</label> 
                                     
                                     <input class="form-control" type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" disabled>
@@ -101,18 +103,18 @@
                                 
                                 <section> 
                                     <h4 class="card-header text-white bg-primary mb-3"><strong>Domicilio</strong></h4>
-                                    <label class="col-form-label" for="calle"></label>(*) Calle: <br>
+                                    <label class="col-form-label" for="calle"></label>Calle: <br>
                                     
                                     <input class="form-control" type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle" disabled>
                                     <br>
-                                    <label class="col-form-label" for="domicilioNumero"></label>(*) Numero: 
+                                    <label class="col-form-label" for="domicilioNumero"></label>Numero: 
                                     
                                     <input class="form-control" type="number" name="domicilioNumero" id="domicilioNumero" placeholder="Numero" disabled> <br> 
-                                    <label class="col-form-label" for="domicilioBarrio"></label>(*) Barrio: 
+                                    <label class="col-form-label" for="domicilioBarrio"></label>Barrio: 
                                     <input class="form-control" type="text" name="domicilioBarrio" id="domicilioBarrio" placeholder="Barrio" disabled> 
                                     
                                     <br>
-                                    <label class="col-form-label" for="localidad"></label>(*) Localidad:
+                                    <label class="col-form-label" for="localidad"></label>Localidad:
                                     <input class="form-control" type="text" name="localidad" id="localidad" placeholder="Localidad" disabled>
     
                                     <br> 
@@ -135,7 +137,7 @@
                                 </div>
     
                                 <section>
-                                    <h4 class="card-header text-white bg-primary mb-3" ><strong>(*) Telefono</strong></h4>
+                                    <h4 class="card-header text-white bg-primary mb-3" ><strong>Telefono</strong></h4>
                                     <label class="col-form-label" for="telefonoCliente">Telefono:</label> 
                                     <input class="form-control" type="tel" name="telefonoCliente" id="telefonoCliente" placeholder="Telefono" disabled>
                                     <br>
@@ -187,4 +189,5 @@
             <br>
         </footer>
     </body>
+    <script src="../../js/validacionBootstrap.js"></script>
 </html>

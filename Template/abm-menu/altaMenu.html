@@ -59,7 +59,7 @@
             <div id="cajaMenu">
                 <h1>Alta de Menús</h1>
             </div>
-            <form action="#" method="post" autocomplete="on">
+            <form action="#" method="post" autocomplete="on" class="needs-validation" novalidate>
                 <fieldset>
                     <div class="card">
                         <legend class="card-header text-white bg-success mb-3"><strong>Datos del Menú</strong></legend>
@@ -69,6 +69,7 @@
                             <div>
                                 <label class="col-form-label" for="codigoMenu">(*) Codigo del Menu:</label> <br>
                                 <input class="form-control" type="number" name="codigoMenu" id="codigoMenu" placeholder="Codigo..." required="" disabled>
+
                             </div>
         
                             <div>
@@ -76,6 +77,8 @@
                                 <label class="col-form-label" for="nombreMenu">(*) Nombre del menu:</label><br>
                                 <input class="form-control" type="text" name="nombreMenu" id="nombreMenu" size="30" maxlength="30" placeholder="Nombre"
                                 required="">
+                                <div class="valid-feedback">El valor ingresado es valido</div>
+                                <div class="invalid-feedback">Ingrese un Nombre al menú</div>
                             </div>
         
                             <div>
@@ -87,18 +90,22 @@
                             <div>
                                 <br>
                                 <label class="col-form-label" for="tipoMenu">(*) Tipo de Menu:</label>
-                                <select class="form-select" name="tipoMenu" id="tipoMenu" >
-                                    <option selected>Seleccione una opcion</option>
+                                <select class="form-select" name="tipoMenu" id="tipoMenu" required>
+                                    <option selected disabled value="">Seleccione una opcion</option>
                                     <option value="1">Entrada</option>
                                     <option value="2">Plato principal</option>
                                     <option value="3">Postre</option>
                                 </select>
+                                <div class="valid-feedback">El valor ingresado es valido</div>
+                                <div class="invalid-feedback">Seleccione una opcion</div>
                             </div>
         
                             <div>
                                 <br>
                                 <label class="col-form-label" for="precioMenu">(*) Precio del menu</label>
-                                <input class="form-control" type="number" name="precioMenu" id="precioMenu" placeholder="Ejemplo: 5000">
+                                <input class="form-control" type="number" name="precioMenu" id="precioMenu" placeholder="Ejemplo: 5000" required>
+                                <div class="valid-feedback">El valor ingresado es valido</div>
+                                <div class="invalid-feedback">Debe ingresar un Precio</div>
                             </div>
         
                             <div class="form-check form-switch">
@@ -110,13 +117,15 @@
                             <div>
                                 <br>
                                 <label class="col-form-label" for="tipoComida">(*) Tipo de comida: </label>
-                                <select class="form-select" name="tipoComida" id="tipoComida" >
-                                    <option selected>Seleccione una opcion</option>
+                                <select class="form-select" name="tipoComida" id="tipoComida" required>
+                                    <option selected disabled value="">Seleccione una opcion</option>
                                     <option value="1">Normal</option>
                                     <option value="2">Vegetariano</option>
                                     <option value="3">Celiaco</option>
                                     <option value="4">Diabetico</option>
                                 </select>
+                                <div class="valid-feedback">El valor ingresado es valido</div>
+                                <div class="invalid-feedback">Seleccione una opcion</div>
                             </div>
                             <div>
                                 <br>
@@ -158,4 +167,5 @@
             <br>
         </footer>
     </body>
+    <script src="../../js/validacionBootstrap.js"></script>
 </html>

@@ -88,19 +88,14 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                                 <input class="form-control" type="date" name="fehcaPedido" id="fechaPedido"  required="">
-                                <div class="valid-feedback">
-                                    La fecha del pedido es correcta
-                                </div>
-                                <div class="invalid-feedback">
-                                    Se debe ingresar una fecha para el pedido
-        
-                                </div>
+                                
                                 <br>
                             </div>
                             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
                                 <button class="btn btn-primary" id="botonVerificar" type="button" name="boton">Verificar</button>
                             </div>
                         </div>
+                        <br>
                         <p id="verificar"></p>
                         
                         <br>
@@ -117,7 +112,7 @@
                                     <option selected>Seleccione una opcion </option>
                                 </select>
                                 <div class="valid-feedback" >
-                                    La seleccion del cliente es correcta
+                                    Debe seleccionar un cliente
                                 </div>
                                 <div class="invalid-feedback">
                                     Debe seleccionar un cliente 
@@ -138,8 +133,8 @@
                         
                         <br>
                         <label class="col-form-label" for="estadoPedido" >Estado del pedido</label>
-                        <select class="form-select is-invalid" name="estadoPedido" id="estadoPedido" aria-describedby="validationServer04Feedback" required onchange="desactivarYActivarComentario(this)">
-                            <option selected disabled>Seleccione una opcion </option>
+                        <select class="form-select " name="estadoPedido" id="estadoPedido" aria-describedby="validationServer04Feedback" required onchange="desactivarYActivarComentario(this)">
+                            <option selected  disabled value="">Seleccione una opcion </option>
                             <option value="1">Pendiente</option>
                             <option value="2">En preparación</option>
                             <option value="3">En camino</option>
@@ -147,13 +142,7 @@
                             <option value="5">Devuelto</option>
                             <option value="6">Cancelado</option>
                         </select>
-                        <div class="valid-feedback" id="estadoPediod">
-                            La seleccion del estado del pedido es correcta
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe seleccionar un estado del pedido
-
-                        </div>
+                        
                         
                         <br>
                         <label class="col-form-label" for="comentarioPedido" >Comentario:</label> <br>
@@ -169,7 +158,7 @@
                             <input type="radio" name="enviarORetirar" id="retirarLocal" required="">
                             <label  for="retirarLocal">Retirar en el local</label>
                             <div class="valid-feedback">
-                                
+                                El calor ingresado es valido
                             </div>
                             <div class="invalid-feedback">
                                 debe seleccionar una opcion 
@@ -180,13 +169,7 @@
                         <br>
                         <label class="col-form-label" for="rangoHorario">(*) Rango de Horario</label>
                         <input class="form-control" type="number" name="tiempoEstimado" id="tiempoEstimado" required="">
-                        <div class="valid-feedback">
-                                El rango ingresado es correcto 
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe ingresar un rango de horario
-
-                        </div>
+                        
                         <br> <br>
                         <h5>Total a pagar del pedido es: </h5>
 
@@ -224,27 +207,5 @@
 
 </body>
 <script src="../../js/pedido.js"></script>
-<!-- bootstrap -->
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
+<script src="../../js/validacionBootstrap.js"></script>
 </html>

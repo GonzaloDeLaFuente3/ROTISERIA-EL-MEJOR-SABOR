@@ -25,14 +25,19 @@
           
                       <h3 class="mb-4">Ingresar</h3>
                       
-                      <form action="#" method="post" autocomplete="on">
+                      <form action="#" method="post" autocomplete="on" class="needs-validation" novalidate>
                         <div class="form-outline mb-3">
                             <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Ingrese su email" required=""/>
+                            <div class="valid-feedback">El valor ingresado es valido</div>
+                            <div class="invalid-feedback">Ingrese un Email</div>
                             <label class="form-label" for="typeEmailX-2">Email</label>
+                            
                         </div>
               
                         <div class="form-outline mb-3">
                             <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Ingrese su contraseña" required=""/>
+                            <div class="valid-feedback">El valor ingresado es valido</div>
+                            <div class="invalid-feedback">Ingrese una Contraseña</div>
                             <label class="form-label" for="typePasswordX-2">Contraseña</label>
                         </div>
     
@@ -68,4 +73,5 @@
             </div>
         </footer>
     </body>
+    <script src="../../js/validacionBootstrap.js"></script>
 </html>

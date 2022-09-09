@@ -65,30 +65,33 @@
                         <div class="card">
                             <legend class="card-header text-white bg-primary mb-3"><strong>Seleccione un Cadete</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> seleccione un cadete a modificar</small> 
+                                <small><strong>Nota:</strong> seleccione un cadete a modificar.Los campos que cuentan con el simbolo (*) son obligatorios</small> 
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="tipoMenu">Cadete:</label>
-                                    <select class="form-select" name="tipoMenu" id="tipoMenu">
-                                        <option selected>Seleccione una opcion</option>
+                                    <label class="col-form-label" for="tipoMenu">(*) Cadete:</label>
+                                    <select class="form-select" name="tipoMenu" id="tipoMenu" required>
+                                        <option selected disabled value="">Seleccione una opcion</option>
                                         <option value="1">Gustavo Contreras</option>
                                         <option value="2">De la Fuente Gonzalo</option>
                                         <option value="3">Joseph Ontivero</option>
+                                    
                                     </select>
+                                    <div class="valid-feedback">El valor ingresado es valido</div>
+                                    <div class="invalid-feedback">Debe seleccionar una opcion</div>
                                 </div>
                             </div>
                             <legend class="card-header text-white bg-primary mb-3"><strong>Informacion a Modificar</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small>
+                                <small><strong>Nota:</strong> los campos que cuentan con el simbolo  son obligatorios</small>
                                 <div>
-                                    <label class="col-form-label" for="cuilCadete"><strong>(*) Cuil</strong></label>
+                                    <label class="col-form-label" for="cuilCadete"><strong> Cuil</strong></label>
                                     <br>
                                     <input class="form-control" type="number" name="cuilCadete" id="cuilCadete"  placeholder="Ingresar el cuil sin guiones" required="" disabled>
                                 </div>
             
                                 <section>
                                     <br>
-                                    <h4 class="card-header text-white bg-primary mb-3"><strong>(*) Apellido y nombre</strong></h4>
+                                    <h4 class="card-header text-white bg-primary mb-3"><strong> Apellido y nombre</strong></h4>
                                     <label class="col-form-label" for="nombre">Nombre:</label> 
                                     <input class="form-control" type="text" name="nombre" id="nombre" size="50" maxlength="50" placeholder="Nombre" required="" disabled>
                                     <label class="col-form-label" for="apellido">Apellido:</label> 
@@ -101,7 +104,7 @@
                                     <label class="col-form-label" for="telefonoFijo"> Telefono fijo:</label>
                                     
                                     <input class="form-control" type="tel" name="telefonoFijo" id="telefonoFijo" placeholder="Telefono fijo" disabled>
-                                    <label class="col-form-label" for="telefonoCelular">(*) Telefono celular:</label>
+                                    <label class="col-form-label" for="telefonoCelular"> Telefono celular:</label>
                                     
                                     <input class="form-control" type="tel" name="telefonoCelular" id="telefonoCelular" placeholder="Telefono celular" required="" disabled>
                                 </section>
@@ -109,16 +112,16 @@
                                 <section> 
                                     <br>
                                     <h4 class="card-header text-white bg-primary mb-3"><strong>Domicilio</strong></h4>
-                                    <label class="col-form-label" for="calle"></label>(*) Calle: <br>
+                                    <label class="col-form-label" for="calle"></label> Calle: <br>
                                     
                                     <input class="form-control" type="text" name="calle" id="calle" size="50" maxlength="50" placeholder="Calle" required="" disabled>
-                                    <label class="col-form-label" for="domicilioNumero"></label>(*) Numero: 
+                                    <label class="col-form-label" for="domicilioNumero"></label> Numero: 
                                     
                                     <input class="form-control" type="number" name="domicilioNumero" id="domicilioNumero" placeholder="Numero" required="" disabled> <br> <br>
-                                    <label class="col-form-label" for="departamento"></label>(*) Departamento: 
+                                    <label class="col-form-label" for="departamento"></label> Departamento: 
                                     
                                     <input class="form-control" type="text" name="departamento" id="departamento" placeholder="Departamento" required="" disabled> 
-                                    <label class="col-form-label" for="localidad"></label>(*) Localidad:
+                                    <label class="col-form-label" for="localidad"></label> Localidad:
                                 
                                     <input class="form-control" type="text" name="localidad" id="localidad" placeholder="Localidad" required="" disabled>
                                 
@@ -126,13 +129,13 @@
             
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="fechaNacimiento"><strong>(*) Fecha nacimiento</strong></label><br>
+                                    <label class="col-form-label" for="fechaNacimiento"><strong> Fecha nacimiento</strong></label><br>
                                     <input class="form-control" type="date" name="fechaNacimiento" id="fechaNacimiento"  required="" disabled>
                                 </div>
             
                                 <div> 
                                     <br>
-                                    <label class="col-form-label" for="fechaIngresoRotiseria"><strong>(*) Fecha en la que ingreso a la rotiseria</strong></label>
+                                    <label class="col-form-label" for="fechaIngresoRotiseria"><strong> Fecha en la que ingreso a la rotiseria</strong></label>
                                     <input class="form-control" type="date" name="fechaIngresoRotiseria" id="fechaIngresoRotiseria" required="" disabled>
                                 </div>
                                 
@@ -213,4 +216,5 @@
             <br>
         </footer>
     </body>
+    <script src="../../js/validacionBootstrap.js"></script>
 </html>

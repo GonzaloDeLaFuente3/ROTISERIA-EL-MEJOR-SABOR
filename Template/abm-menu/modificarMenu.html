@@ -64,31 +64,34 @@
                         <div class="card">
                             <legend class="card-header text-white bg-primary mb-3"><strong>Seleccione un Menú</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> seleccione un menú a modificar</small> 
+                                <small><strong>Nota:</strong> seleccione un menú a modificar.Los campos que cuentan con el simbolo (*) son obligatorios</small> 
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="tipoMenu">Menú:</label>
-                                    <select class="form-select" name="tipoMenu" id="tipoMenu" >
-                                        <option selected>Seleccione una opcion</option>
+                                    <label class="col-form-label" for="tipoMenu">(*) Menú:</label>
+                                    <select class="form-select" name="tipoMenu" id="tipoMenu" required>
+                                        <option selected disabled value="">Seleccione una opcion</option>
                                         <option value="1">Medallones de pescado</option>
                                         <option value="2">Tarta de choclo</option>
                                         <option value="3">Pizza calabresa</option>
                                     </select>
+                                    <div class="valid-feedback">El valor ingresado es valido</div>
+                                    <div class="invalid-feedback">Debe seleccionar una opcion</div>
+
                                 </div>
                             </div>
                             <legend class="card-header text-white bg-primary mb-3"><strong>Datos del Menú</strong></legend>
                             <div class="card-body">
-                                <small><strong>Nota:</strong> los campos que cuentan con el simbolo (*) son obligatorios</small> 
+                                 
                                 <div>
-                                    <label class="col-form-label" for="codigoMenu">(*) Codigo del Menu:</label> <br>
-                                    <input class="form-control" type="number" name="codigoMenu" id="codigoMenu" placeholder="Codigo" required="" disabled>
+                                    <label class="col-form-label" for="codigoMenu"> Codigo del Menu:</label> <br>
+                                    <input class="form-control" type="number" name="codigoMenu" id="codigoMenu" placeholder="Codigo"  disabled>
                                 </div>
             
                                 <div>
                                     <br> 
-                                    <label class="col-form-label" for="nombreMenu">(*) Nombre del menu:</label><br>
+                                    <label class="col-form-label" for="nombreMenu"> Nombre del menu:</label><br>
                                     <input class="form-control" type="text" name="nombreMenu" id="nombreMenu" size="30" maxlength="30" placeholder="Nombre"
-                                    required="" disabled>
+                                     disabled>
                                 </div>
             
                                 <div>
@@ -99,7 +102,7 @@
             
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="tipoMenu">(*) Tipo de Menu:</label>
+                                    <label class="col-form-label" for="tipoMenu"> Tipo de Menu:</label>
                                     <select class="form-select" name="tipoMenu" id="tipoMenu" disabled>
                                         <option selected>Seleccione una opcion</option>
                                         <option value="1">Entrada</option>
@@ -110,7 +113,7 @@
             
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="precioMenu">(*) Precio del menu</label>
+                                    <label class="col-form-label" for="precioMenu"> Precio del menu</label>
                                     <input class="form-control" type="number" name="precioMenu" id="precioMenu" placeholder="Ejemplo: 5000" disabled>
                                 </div>
             
@@ -122,7 +125,7 @@
             
                                 <div>
                                     <br>
-                                    <label class="col-form-label" for="tipoComida">(*) Tipo de comida: </label>
+                                    <label class="col-form-label" for="tipoComida"> Tipo de comida: </label>
                                     <select class="form-select" name="tipoComida" id="tipoComida" disabled>
                                         <option selected>Seleccione una opcion</option>
                                         <option value="1">Normal</option>
@@ -182,4 +185,5 @@
     </body>
 
     <script src="../../js/modificarMenu.js"></script>
+    <script src="../../js/validacionBootstrap.js"></script>
 </html>
