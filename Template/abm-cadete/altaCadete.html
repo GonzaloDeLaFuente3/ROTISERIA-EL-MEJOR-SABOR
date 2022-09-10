@@ -75,7 +75,7 @@ del vehículo y código de zona de entregas asignada.-->
                 </div>
                 <br><br>
                 
-                    <form action="#" method="post" autocomplete="on" class="needs-validation" novalidate>
+                    <form action="#" method="post" autocomplete="on" class="needs-validation" onsubmit="return validacion()" novalidate>
                         <fieldset>
                             <div class="card">
                                 <legend class="card-header text-white bg-success mb-3"><strong>Informacion para completar el resgistro</strong></legend>
@@ -136,12 +136,21 @@ del vehículo y código de zona de entregas asignada.-->
                                     <div class="invalid-feedback">Ingrese una Localidad</div>
                                 
                                 </div>
-                                <div> <br>
-                                    <label class="col-form-label" for="fechaNacimiento"><strong>(*) Fecha nacimiento</strong></label><br>
-                                    <input class="form-control" type="date" name="fechaNacimiento" id="fechaNacimiento"  required="">
-                                    <div class="valid-feedback">El valor ingresado es valido</div>
-                                    <div class="invalid-feedback">Ingrese una Fecha</div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                                        <input class="form-control" type="date" name="fechaNacimiento" id="fechaNacimiento"  required="">
+                                                            
+                                        <br>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                                        <button class="btn btn-primary" id="botonVerificar" type="button" name="boton">Verificar</button>
+                                    </div>
                                 </div>
+                                <br>
+                                <p id="verificar"></p> 
+                                                    
+                                <br>
                                 <div> <br>
                                     <label class="col-form-label" for="fechaIngresoRotiseria"><strong>(*) Fecha en la que ingreso a la rotiseria</strong></label>
                                     <input class="form-control" type="date" name="fechaIngresoRotiseria" id="fechaIngresoRotiseria" required="">
@@ -216,4 +225,5 @@ del vehículo y código de zona de entregas asignada.-->
         </footer>
     </body>
     <script src="../../js/validacionBootstrap.js"></script>
+    <script src="../../js/fechaNacimiento.js"></script>
 </html>
