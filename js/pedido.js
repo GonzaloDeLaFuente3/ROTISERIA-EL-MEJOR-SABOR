@@ -38,10 +38,10 @@ function verificarFechaBoton(){
 //mostrar para agregar comentario cuando selecciona devuelto o cancelado
 function desactivarYActivarComentario(obj){
     if(obj.value==="5" || obj.value==="6"){
-        document.getElementById("comentarioPedido").disabled = true;
+        document.getElementById("comentarioPedido").disabled = false;
         document.getElementById("comentarioPedido").focus();
     }else{
-        document.getElementById("comentarioPedido").disabled = false;
+        document.getElementById("comentarioPedido").disabled = true;
     }
 
 }
