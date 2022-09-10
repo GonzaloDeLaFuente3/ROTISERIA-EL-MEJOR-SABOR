@@ -21,3 +21,5 @@ for (var i = 1; i < (rows.length); i++){
         x.parentNode.setAttribute('class','table-success');
     }
 }
+
+setInterval(function(){ location.href = location.href; }, 60000 * 5)
