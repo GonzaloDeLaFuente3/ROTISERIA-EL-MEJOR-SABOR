@@ -107,3 +107,16 @@ hr{
   margin-inline: 1rem;
   margin-block: 1rem;
 }
+
+th{
+  cursor: pointer;
+  
+}
+th:hover{
+  color: #a1a1a1;
+  background-color: #000000;
+}
+.rojo{
+  color: red;
+  background-color: red;
+}
