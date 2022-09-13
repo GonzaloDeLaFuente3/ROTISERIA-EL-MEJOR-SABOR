@@ -49,7 +49,6 @@ hr{
 /*PANEL MENUS*/
 .panelMenus{
   margin: auto;
-  text-align: center;
   background-color: #83C5BE;
   border-radius: 2rem;
   margin-bottom: 7rem;
@@ -115,4 +114,8 @@ th{
 th:hover{
   color: #a1a1a1;
   background-color: #000000;
+}
+
+#info{
+  margin-left: 2rem;
 }

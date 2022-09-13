@@ -43,7 +43,6 @@ function desactivarYActivarComentario(obj){
     }else{
         document.getElementById("comentarioPedido").disabled = true;
     }
-
 }
 
 
