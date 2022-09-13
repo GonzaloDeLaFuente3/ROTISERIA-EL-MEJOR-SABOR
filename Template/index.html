@@ -11,11 +11,35 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-        
+        <script src="../js/listaPlatos.js"></script>
         <link rel="stylesheet" href="../css/header-footer.css">
         <link href="../css/index.css" rel="stylesheet">
     </head>
     <body>
+        <div class="modal fade" id="miModal" tabindex="-1" area-hidden="true" aria-labelledby="modalTitle">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <i class="bi-cart-fill me-1"></i>
+                        <h5 class="modal-title" id="modal-title">Carrito</h5>
+                        <button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="contenedorCarrito">
+                        </div>
+
+                        <div class="mt-4">
+                            <strong>Precio total: $0</strong>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Vaciar carrito</button>
+                        <button class="btn btn-success" data-bs-dismiss="modal" type="submit">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header>
             <!--ENCABEZADO DE NAVEGACION-->
             <nav class="navbar navbar-lg navbar-light fixed-top col-primary">
@@ -49,14 +73,15 @@
                         </ul>
                         
                         <form class="d-flex notificaciones">
-                        <button class="btn btn-outline-light" type="submit">
-                            <i class="bi bi-bell-fill"></i>
-                            Notificaciones
-                            <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
-                        </button>
-                        </form>
-                        <form class="d-flex carrito">
                             <button class="btn btn-outline-light" type="submit">
+                                <i class="bi bi-bell-fill"></i>
+                                Notificaciones
+                                <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
+                            </button>
+                        </form>
+
+                        <form class="d-flex carrito">
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#miModal">
                                 <i class="bi-cart-fill me-1"></i>
                                 Carrito
                                 <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
@@ -64,19 +89,19 @@
                         </form>
         
                         <ul class="navbar-nav micuenta">
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-light dropdown-toggle" id="navbarDropdown" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                                Mi Cuenta
-                            </button>   
-                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="navegacion/login.html">Ingresar</a>
-                                <a class="dropdown-item" href="abm-cliente/altaCliente.html">Registrarse</a>
-                                <hr class="dropdown-divider" />
-                                <a class="dropdown-item" href="#">Configuración</a>
-                                <a class="dropdown-item" href="index.html">Salir</a>
-                            </div>
-                        </li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-light dropdown-toggle" id="navbarDropdown" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                    Mi Cuenta
+                                </button>   
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="navegacion/login.html">Ingresar</a>
+                                    <a class="dropdown-item" href="abm-cliente/altaCliente.html">Registrarse</a>
+                                    <hr class="dropdown-divider" />
+                                    <a class="dropdown-item" href="#">Configuración</a>
+                                    <a class="dropdown-item" href="index.html">Salir</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -84,6 +109,8 @@
     
         </header>
 
+        
+        
         <!--PROMOCIONES-->
         <div class="container-fluid" id="promociones">
             <div class="container">
@@ -161,273 +188,33 @@
                 <h1>Nuestros Menús</h1>
             </div>
 
-            <section class="panelMenus swiper mySwiper" id="entrada">
+            <section class="panelMenus swiper mySwiper" >
                 <br>
                 <h2 id="labelMenus">Entradas de mesa</h2>
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper content">
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://vinomanos.com/wp-content/uploads/2020/07/Tarta-de-choclo.jpg" alt="Tarta de choclo" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Tarta de choclo</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $450.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.comedera.com/wp-content/uploads/2022/06/empanadas-argentinas-de-pollo.jpg" alt="Empanadas de pollo" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Empanadas de pollo</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1500.00 x 12u
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100" id="medallones">
-                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">PROMO</div>
-                            <img class="card-img-top" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/128/906/products/89678_33d09052aab7e2cff59d1c0032cf77a211-771cf9b02ea3feea6915849035410505-480-0.jpg" alt="Medallones de pescado" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Medallones de pescado</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <span class="text-muted text-decoration-line-through">$230 c/u</span>
-                                    $2500.00 x 12u
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.paulinacocina.net/wp-content/uploads/2020/03/pan-de-carne-800x530.jpg" alt="Pan de carne" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Pan de carne</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1500 x 12u
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper content" id="entrada">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </section>
-            <section class="panelMenus swiper mySwiper" id="platoprincipal">
+
+            <section class="panelMenus swiper mySwiper">
                 <br>
                 <h2 id="labelMenus">Platos principales</h2>
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper content">
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://cocinacriolla.com.ar/wp-content/uploads/2020/07/Pollo-al-verdeo.jpg" alt="Pollo al verdeo" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Pollo al verdeo</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $3500
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2019/10/como-hacer-noquis.jpg" alt="Ñoquis" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Ñoquis</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1400.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://as2.ftcdn.net/v2/jpg/02/96/96/71/1000_F_296967135_DAjY06XgRvqzYr3WYzHvmQp4C66QxM00.jpg" alt="Pizza Calabresa" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Pizza Calabresa</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1700.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://t1.rg.ltmcdn.com/es/posts/9/5/6/fideos_con_salsa_de_tomate_41659_600.jpg" alt="Fideos con salsa" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Fideos con salsa</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1800.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper content" id="platoprincipal">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </section>
-            <section class="panelMenus swiper mySwiper" id="postre">
+
+            <section class="panelMenus swiper mySwiper">
                 <br>
                 <h2 id="labelMenus">Postres</h2>
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper content">
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.comedera.com/wp-content/uploads/2022/04/Helado-de-chocolate-sin-azucar-casero-shutterstock_1418765711.jpg" alt="helado de chocolate" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Helado de chocolate</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1000
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="http://ramolac.com/recipes/images/phphxbebu.jpg" alt="Flan con dulce de leche" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Flan con dulce de leche</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $1500.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://www.paulinacocina.net/wp-content/uploads/2022/01/licuado-de-banana-800x506.jpg" alt="Licuado de banana" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Licuado de banana</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $670.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card h-100">
-                            <img class="card-img-top" src="https://assets.kraftfoods.com/recipe_images/opendeploy/91743_640x428.jpg" alt="Torta"/>
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Torta</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $350.00 x porción
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Comprar</a></div>
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Añadir al carrito</a></div>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper content" id="postre">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -435,14 +222,7 @@
             </section>
             <br>
         </div>
-
-        <!-- Footer-->
-        <!--<footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>-->
         
-
-
         <footer>
             <br>
             <div>
@@ -463,8 +243,9 @@
             <br>
         </footer>
 
+        <script src="../js/carrito.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/sliderMenu.js"></script>
-
+        
     </body>
 </html>

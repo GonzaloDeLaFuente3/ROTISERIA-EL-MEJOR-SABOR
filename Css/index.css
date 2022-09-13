@@ -330,3 +330,17 @@ body {
   background: url(../Template/Resources/Navegacion/food.jpg)  no-repeat center center fixed;
   background-size: cover;
 }
+
+.panelNotificaciones{
+  max-width: 20%;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 3px 3px black;
+}
+
+.pedidoCarrito{
+  background-color: #EDF6F9;
+  border-radius: 1rem;
+  align-items: center;
+}
