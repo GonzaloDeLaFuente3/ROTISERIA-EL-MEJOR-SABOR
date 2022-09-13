@@ -27,14 +27,34 @@
                     <div class="modal-body">
                         <div id="contenedorCarrito">
                         </div>
-
+                        <h5 class="text-secondary text-center" style="user-select: none;" id="labelCarritoVacio">El carrito está vacío.</h5>
                         <div class="mt-4">
-                            <strong>Precio total: $0</strong>
+                            <strong>Precio total: $<span id="precioTotal">0</span></strong>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Vaciar carrito</button>
-                        <button class="btn btn-success" data-bs-dismiss="modal" type="submit">Comprar</button>
+                        <button class="btn btn-secondary" id="vaciarCarrito">Vaciar carrito</button>
+                        <a class="btn btn-success" id="comprarCarrito" type="button" href="navegacion/comprar.html">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalNotificaciones" tabindex="-1" area-hidden="true" aria-labelledby="modalNotificaciones">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <i class="bi-cart-fill me-1"></i>
+                        <h5 class="modal-title" id="modal-title">Notificaciones</h5>
+                        <button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="contenedorNotificaciones">
+                        </div>
+                        <h5 class="text-secondary text-center" style="user-select: none;" id="labelNotificacionesVacias">No tienes notificaciones.</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-dismiss="modal" type="button">Aceptar</button>
                     </div>
                 </div>
             </div>
@@ -73,10 +93,10 @@
                         </ul>
                         
                         <form class="d-flex notificaciones">
-                            <button class="btn btn-outline-light" type="submit">
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="modalNotificaciones">
                                 <i class="bi bi-bell-fill"></i>
                                 Notificaciones
-                                <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
+                                <span class="badge bg-danger text-light ms-1 rounded-pill" id="contadorNotificaciones"></span>
                             </button>
                         </form>
 
@@ -84,7 +104,7 @@
                             <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#miModal">
                                 <i class="bi-cart-fill me-1"></i>
                                 Carrito
-                                <span class="badge bg-danger text-light ms-1 rounded-pill">0</span>
+                                <span class="badge bg-danger text-light ms-1 rounded-pill" id="contadorCarrito"></span>
                             </button>
                         </form>
         
@@ -108,8 +128,6 @@
             </nav>
     
         </header>
-
-        
         
         <!--PROMOCIONES-->
         <div class="container-fluid" id="promociones">
@@ -244,6 +262,7 @@
         </footer>
 
         <script src="../js/carrito.js"></script>
+        <script src="../js/notificaciones.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/sliderMenu.js"></script>
         

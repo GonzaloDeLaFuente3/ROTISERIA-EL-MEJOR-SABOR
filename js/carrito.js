@@ -3,8 +3,25 @@ let carrito = []
 const contenedorEntrada = document.getElementById('entrada');
 const contenedorPrincipal = document.getElementById('platoprincipal');
 const contenedorPostre = document.getElementById('postre');
-
 const contenedorCarrito = document.getElementById('contenedorCarrito');
+const contadorCarrito = document.getElementById('contadorCarrito');
+const precioTotal = document.getElementById('precioTotal');
+const botonVaciar = document.getElementById('vaciarCarrito');
+const botonComprar = document.getElementById('comprarCarrito');
+const labelCarritoVacio = document.getElementById('labelCarritoVacio');
+
+//PARA QUE LOS DATOS NO SE PIERDAN AL RECARGAR LA PAGINA
+document.addEventListener('DOMContentLoaded',() =>{
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+        actualizarCarrito();
+    }
+})
+
+botonVaciar.addEventListener('click', () =>{
+    carrito.length = 0;
+    actualizarCarrito();
+})
 
 stockPlatos.forEach((producto) => {
     const div = document.createElement('div');
@@ -23,15 +40,15 @@ stockPlatos.forEach((producto) => {
                 <div class="bi-star-fill"></div>
                 <div class="bi-star-fill"></div>
             </div>
-            ${producto.precio}
+            $${producto.precio}
         </div>
     </div>
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
         <div class="text-center">
-        <a class="btn btn-outline-success mt-auto" href="#">Comprar</a>
+        <a class="btn btn-outline-success mt-auto" type="button" href="navegacion/comprar.html">Comprar</a>
         </div>
         <div class="text-center">
-        <button class="btn btn-outline-primary mt-auto" type="button" id="agregar${producto.id}">Añadir al carrito</button>
+        <a class="btn btn-outline-primary mt-auto" type="button" id="agregar${producto.id}">Añadir al carrito</a>
         </div>
     </div>`
 
@@ -50,8 +67,17 @@ stockPlatos.forEach((producto) => {
 })
 
 const agregarCarrito = (prodId) => {
-    const item = stockPlatos.find((prod) => prod.id === prodId);
-    carrito.push(item);
+    if(carrito.some (prod => prod.id === prodId)){
+        const prod = carrito.map(prod => {
+            if(prod.id === prodId){
+                prod.cantidad++;
+            }
+        })
+    }else{
+        const item = stockPlatos.find((prod) => prod.id === prodId);
+        carrito.push(item);
+    }
+    
     actualizarCarrito();
 }
 
@@ -80,4 +106,18 @@ const actualizarCarrito = () => {
 
         contenedorCarrito.appendChild(div);
     })
+    localStorage.setItem('carrito',JSON.stringify(carrito));
+    contadorCarrito.innerText = carrito.length;
+    if(contadorCarrito.textContent == "0"){
+        labelCarritoVacio.classList.remove('d-none');
+        contadorCarrito.classList.add('d-none');
+        botonVaciar.classList.add('disabled');
+        botonComprar.classList.add('disabled');
+    }else{
+        labelCarritoVacio.classList.add('d-none');
+        contadorCarrito.classList.remove('d-none');
+        botonVaciar.classList.remove('disabled');
+        botonComprar.classList.remove('disabled');
+    }
+    precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio*prod.cantidad, 0);
 }
