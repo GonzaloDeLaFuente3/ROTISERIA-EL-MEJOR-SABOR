@@ -69,36 +69,26 @@
             </div>
             <div class="row" id="tablaListado">
                 <div class="col">
-                    <table class="table table-dark table-hover table-striped" id="tablaPedidoPendiente">
-                        <tr>
-                            <th scope="col" onclick="sortTable(0, 'str')">#</th>
-                            <th scope="col" onclick="sortTable(1, 'str')">Menu</th>
-                            <th scope="col" onclick="sortTable(2, 'float')">Costo</th>
-                            <th scope="col" onclick="sortTable(3, 'str')">Tipo</th>
-                            <th scope="col" onclick="sortTable(4, 'str')">Fecha Venta</th>
-                            <th scope="col" onclick="sortTable(5, 'str')">Cliente</th>
-                            <th scope="col" onclick="sortTable(6, 'str')">Domicilio</th>
-                        </tr>
+                    <table class="table table-dark table-hover table-striped " id="tablaPedidoPendiente">
+                        <thead>
+                            <tr>
+                                <th scope="col" onclick="sortTable(0, 'str')">#Código</th>
+                                <th scope="col" onclick="sortTable(1, 'date')"><i class="bi bi-calendar-date-fill"></i> Fecha</th>
+                                <th scope="col" onclick="sortTable(2, 'str')">
+                                    <div class="d-flex">
+                                        <i class="bi bi-clock-fill"></i>
+                                        Hora
+                                    </div>
+                                </th>
+                                <th scope="col" onclick="sortTable(3, 'str')"><i class="bi bi-box-seam"></i> Menú</th>
+                                <th scope="col" onclick="sortTable(4, 'float')">$Precio</th>
+                                <th scope="col" onclick="sortTable(5, 'str')"><i class="bi bi-person-badge-fill"></i> Cliente</th>
+                                <th scope="col" onclick="sortTable(6, 'str')"><i class="bi bi-geo-alt-fill"></i> Domicilio</th>
+                                <th scope="col" onclick="sortTable(7, 'str')"><i class="bi bi-truck"></i> Tipo Entrega</th>
+                                <th scope="col" onclick="sortTable(8, 'str')"><i class="bi bi-ui-checks-grid"></i> Estado</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row">1</th>
-                                <td>Pizza Calabresa</td>
-                                <td>2500</td>
-                                <td>Plato principal</td>
-                                <td>15/03/2021</td>
-                                <td>Jose Aguirre</td>
-                                <td>La Carrera</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">2</th>
-                                <td>Ñoquis</td>
-                                <td>1000</td>
-                                <td>Plato principal</td>
-                                <td>06/07/2022</td>
-                                <td>Tomas Contreras</td>
-                                <td>Capital</td>
-                            </tr>
+                        <tbody id="contenedorTabla">
                         </tbody>
                     </table>
                 </div>
@@ -134,5 +124,7 @@
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="../../js/buscar.js"></script>
+    <script src="../../js/listaPedidos.js"></script>
+    
 </body>
 </html>

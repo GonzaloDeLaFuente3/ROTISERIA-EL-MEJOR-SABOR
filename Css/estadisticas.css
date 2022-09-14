@@ -60,15 +60,8 @@ body{
   padding-bottom: 1.5rem;
 }
 
-.container, .container-sm {
-    max-width: 500px;
-}
 
-@media (min-width: 576px){
-    .container, .container-sm {
-        max-width: 714px;
-    }
-}
+
 th{
     cursor: pointer;
     
