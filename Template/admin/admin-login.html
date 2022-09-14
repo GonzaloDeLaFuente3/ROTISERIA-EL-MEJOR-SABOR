@@ -85,6 +85,30 @@
             </div>
         </nav>
     </header>
+
+    <div class="modal fade" id="modalInformacion" tabindex="-1" area-hidden="true" aria-labelledby="modalInformacion">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Información Pedidos</h5>
+                    <button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="contenedorInformacion">
+                    </div>
+                    <h5 class="text-secondary text-center" style="user-select: none;" id="labelCarritoVacio">El carrito está vacío.</h5>
+                    <div class="mt-4">
+                        <strong>Precio total: $<span id="precioTotal">0</span></strong>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="vaciarCarrito">Vaciar carrito</button>
+                    <a class="btn btn-success" id="comprarCarrito" type="button" href="navegacion/comprar.html">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div id="titulo">
             <img src="../Resources/Logos/titulo.png" alt="titulo_rotiseria">
@@ -111,7 +135,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr >
+                                <tr data-bs-toggle="modal" data-bs-target="#modalInformacion">
                                     <td scope="row">1</th>
                                     <td>07/09/2022</td>
                                     <td>15:38</td>
@@ -177,5 +201,12 @@
     <script src="../../js/sliderMenu.js"></script>
     <script src="../../js/ordenarTabla.js"></script>
     <script src="../../js/controlarHora.js"></script> 
+    <script src="../../js/informacionPedido.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../../js/buscar.js"></script>
+    
 </body>
 </html>

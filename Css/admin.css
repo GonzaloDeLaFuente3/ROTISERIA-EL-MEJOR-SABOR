@@ -53,6 +53,7 @@ hr{
   border-radius: 2rem;
   margin-bottom: 7rem;
   padding-bottom: 4rem;
+  max-height: 55rem;
 }
 
 /*PROPIEDADES TARJETA*/
@@ -118,4 +119,8 @@ th:hover{
 
 #info{
   margin-left: 2rem;
+}
+
+tr{
+  cursor: pointer;
 }
