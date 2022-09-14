@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../../css/header-footer.css">
     <link rel="stylesheet" href="../../css/estadisticas.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
     
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top col-primary">
             <div class="container-fluid">
-                <a href="../index.html">
+                <a href="admin-login.html">
                 <img src="../Resources/Logos/rotiseria.png" alt="icono principal" id="logo"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -62,6 +64,9 @@
         </div>
         <div class="container panelMenus">
             <h2>Pedidos</h2>
+            <div class="text-start">
+                <p id="info"><strong>Nota:</strong> para ordenar los pedidos según un campo determinado, presione en la columna correspondiente.</p>
+            </div>
             <div class="row" id="tablaListado">
                 <div class="col">
                     <table class="table table-dark table-hover table-striped" id="tablaPedidoPendiente">
@@ -124,5 +129,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../../js/sliderMenu.js"></script>
     <script src="../../js/ordenarTabla.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../../js/buscar.js"></script>
 </body>
 </html>
