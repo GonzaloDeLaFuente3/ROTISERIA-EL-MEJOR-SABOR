@@ -90,6 +90,7 @@ const eliminarDelCarrito = (prodId) => {
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
 
+    //INFORMACION A MOSTRAR EN EL MODAL
     carrito.forEach((prod) => {
         const div = document.createElement('div');
         div.classList.add('pedidoCarrito');
@@ -98,7 +99,7 @@ const actualizarCarrito = () => {
         div.classList.add('my-2');
         div.innerHTML = `
         <p class="col-sm-4 col-form-label">${prod.nombre}</p>
-        <p class="col-sm-4 col-form-label">Precio: ${prod.precio}</p>
+        <p class="col-sm-4 col-form-label">Precio: $${prod.precio}</p>
         <p class="col-sm-3 col-form-label" id="cantidad">Cantidad: ${prod.cantidad}</p>
         <div class="col-sm-1">
             <button class="btn btn-danger" onClick = "eliminarDelCarrito(${prod.id})"><i class="bi bi-trash-fill"></i></button>

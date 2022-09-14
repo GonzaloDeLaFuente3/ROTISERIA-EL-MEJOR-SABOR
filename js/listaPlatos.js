@@ -13,7 +13,8 @@ let stockPlatos = [
     {id: 12, nombre: "Fideos con salsa", tipo_menu: "plato principal", tipo_comida: "Normal", precio: 1800.00, img: 'https://t1.rg.ltmcdn.com/es/posts/9/5/6/fideos_con_salsa_de_tomate_41659_600.jpg',cantidad: 1}
 ];
 
-let notificaciones = [
-    {id: 1, },
-    {}
-]
+// let notificaciones = [
+//     {id: 1, },
+//     {}
+// ]
+
