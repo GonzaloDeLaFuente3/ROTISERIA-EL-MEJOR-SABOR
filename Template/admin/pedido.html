@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top col-primary">
             <div class="container-fluid">
-                <a href="../index.html">
+                <a href="../admin/admin-login.html">
                 <img src="../Resources/Logos/rotiseria.png" alt="icono principal" id="logo"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="card">
+        <div class="card d-sm-block">
             
             <h3 class="card-header text-white bg-success mb-3">Informacion del pedido</h3>
             <div class="card-body">
@@ -124,7 +124,15 @@
                             </div>
 
                         </div>
-                        
+                        <br>
+                        <small>En el campo de plato, se puede seleccionar mas de una opcion presecionando "ctrl" y seleccionado las opciones que desea</small> <br>
+                        <label class="col-form-label" for="plato">(*) Plato:</label>
+                        <select class="form-select " name="plato" id="plato" required multiple aria-describedby="validationServer04Feedback">
+                            <option selected  disabled value="">Seleccione una opcion </option>
+                            <option value="1">Locro</option>
+                            <option value="2">Empanada</option>
+                            <option value="3">Pizza</option>
+                        </select>
 
                         
 
@@ -132,8 +140,8 @@
 
                         
                         <br>
-                        <label class="col-form-label" for="estadoPedido" >Estado del pedido</label>
-                        <select class="form-select " name="estadoPedido" id="estadoPedido" aria-describedby="validationServer04Feedback" required onchange="desactivarYActivarComentario(this)">
+                        <label class="col-form-label" for="estadoPedido" >(*) Estado del pedido</label>
+                        <select class="form-select " name="estadoPedido" id="estadoPedido" aria-describedby="validationServer04Feedback" required onchange="desactivarYActivarComentario(this)" >
                             <option selected  disabled value="">Seleccione una opcion </option>
                             <option value="1">Pendiente</option>
                             <option value="2">En preparación</option>
@@ -146,7 +154,7 @@
                         
                         <br>
                         <label class="col-form-label" for="comentarioPedido" >Comentario:</label> <br>
-                        <textarea class="form-control" name="comentario" id="comentarioPedido" cols="30" rows="10" ></textarea>
+                        <textarea class="form-control" name="comentario" id="comentarioPedido" cols="30" rows="10" disabled></textarea>
 
                         <br>
                         <small>El siguiente campo es obligatorio: </small>
