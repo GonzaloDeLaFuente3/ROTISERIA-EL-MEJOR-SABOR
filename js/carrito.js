@@ -23,7 +23,7 @@ botonVaciar.addEventListener('click', () =>{
     actualizarCarrito();
 })
 
-stockPlatos.forEach((producto) => {
+listaPlatos.forEach((producto) => {
     const div = document.createElement('div');
     div.classList.add('swiper-slide');
     div.classList.add('card');
@@ -74,7 +74,7 @@ const agregarCarrito = (prodId) => {
             }
         })
     }else{
-        const item = stockPlatos.find((prod) => prod.id === prodId);
+        const item = listaPlatos.find((prod) => prod.id === prodId);
         carrito.push(item);
     }
     

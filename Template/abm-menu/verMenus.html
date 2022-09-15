@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/header-footer.css">
-    <link href="../../css/admin.css" rel="stylesheet">
+    <link href="../../css/verTablas.css" rel="stylesheet">
     
     <title>Menús</title>
     
@@ -57,18 +57,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <i class="bi bi-info-circle-fill mx-3"></i>
-                    <h5 class="modal-title" id="modal-title">Información del pedido</h5>
+                    <i class="bi bi-pencil-square mx-2"></i>
+                    <h5 class="modal-title" id="modal-title">Modificar Menú</h5>
                     <button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="contenedorInformacion">
+                    <div id="contenedorModificarMenu">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-success" id="aceptarPedido" type="button">Aceptar pedido</a>
-                    <a class="btn btn-warning" id="pedidoenCamino" type="button">Pedido en camino</a>
-                    <a class="btn btn-primary" id="pedidoEntregado" type="button">Pedido entregado</a>
+                    <a class="btn btn-success" id="modificarMenu" type="button">Guardar cambios</a>
                     <a class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
                 </div>
             </div>
@@ -102,23 +100,23 @@
             <img src="../Resources/Logos/titulo.png" alt="titulo_rotiseria">
         </div>
         <div class="container-fluid">
-            <section class="panelMenus swiper mySwiper" id="entrada">
+            <section class="panelMenus">
                 <br>
                 <h2 id="labelMenus" class="text-center">Platos Cargados</h2>
                 <p id="info"><strong>Nota:</strong> para ordenar los platos según un campo determinado, presione en la columna correspondiente.
                 <br>La búsqueda se puede realizar por cualquier campo de las columnas.</p>
-                <div class="row mx-3">
+                <div class="row mx-5">
                     <div class="col">
-                        <table class="table table-dark table-hover table-striped " id="tablaRegistro">
+                        <table class="table table-primary table-hover table-striped text-center align-middle" id="tablaRegistro">
                             <thead>
                                 <tr>
                                     <th scope="col" onclick="sortTable(0, 'str')">#</th>
-                                    <th scope="col" onclick="sortTable(1, 'str')">Nombre</th>
-                                    <th scope="col" onclick="sortTable(2, 'str')" style="width: 8%;">Descripción</th>
-                                    <th scope="col" onclick="sortTable(3, 'str')" style="width: 15%;">Tipo de plato</th>
-                                    <th scope="col" onclick="sortTable(4, 'str')">Tipo de comida</th>
+                                    <th scope="col" onclick="sortTable(1, 'str')" style="width: 15%;">Nombre</th>
+                                    <th scope="col" onclick="sortTable(2, 'str')" style="width: 18%;">Descripción</th>
+                                    <th scope="col" onclick="sortTable(3, 'str')" style="width: 12%;">Tipo de plato</th>
+                                    <th scope="col" onclick="sortTable(4, 'str')" style="width: 12%;">Tipo de comida</th>
                                     <th scope="col" onclick="sortTable(5, 'float')">Precio</th>
-                                    <th scope="col" onclick="sortTable(6, 'str')">Stock/Vigencia</th>
+                                    <th scope="col" onclick="sortTable(6, 'str')" style="width: 12%;">Stock/Vigencia</th>
                                     <th scope="col">Acción</th>
                                 </tr>
                             </thead>
@@ -151,15 +149,13 @@
         </div>
         <br>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="../../js/sliderMenu.js"></script>
+
     <script src="../../js/ordenarTabla.js"></script>
-    
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="../../js/buscar.js"></script>
-    <script src="../../js/listas/listaMenus.js"></script>
+    <script src="../../js/listas/listaPlatos.js"></script>
     <script src="../../js/listas/cargarMenus.js"></script>
 </body>
 </html>
