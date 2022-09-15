@@ -5,6 +5,4 @@ let listaClientes = [
     {id: 4,cuil:40123658  , nombre: "Kevin", apellido: "Martinez", barrio:"80 vivienda norte",localidad: "San fernando del valle de catamarca", zona:"norte",telefono: 3834269863},
     {id: 5,cuil:23878123  , nombre: "Agustin", apellido: "Correa", barrio:"Libertador",localidad: "San fernando del valle de catamarca", zona:"oeste",telefono: 3834269863},
     {id: 6,cuil:33812351  , nombre: "Lionel", apellido: "Gomez", barrio:"Los ceibos",localidad: "San fernando del valle de catamarca", zona:"norte",telefono: 3834269863}
-
-
 ];

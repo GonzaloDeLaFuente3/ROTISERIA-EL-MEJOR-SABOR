@@ -96,7 +96,7 @@ const modificarCliente = (cliId) => {
         <input type="text" class="form-control" value="${item.localidad}">
     </div>
     <div class="input-group input-group-sm mb-3">
-        <label class="input-group-text">Tipo de plato:</label>
+        <label class="input-group-text">Zona:</label>
         <select class="form-select">
             <option ${z1}>Seleccione una opción...</option>
             <option ${z2}>Norte</option>

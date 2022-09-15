@@ -5,12 +5,12 @@ const botonEnCamino = document.getElementById('pedidoenCamino');
 const botonEntregado = document.getElementById('pedidoEntregado');
 
 let listaPedidos = [
-    {codigo: 1,fecha: "07/09/2022", hora: "15:38",menu: "Tarta de choclo x3, Medallones de pescado x12", precio: 1300,cliente: "Gabriel Avellaneda",domicilio: "La Carrera Fray Mamerto Esquiu",tipoEntrega: "Envío a domicilio",estado: "Pendiente",comentario: "Muy mal servicio"},
-    {codigo: 2,fecha: "01/12/2023", hora: "18:48",menu: "Pizza Calabresa", precio: 800,cliente: "Tomas Cordero",domicilio: "Capital S.F.V.C",tipoEntrega: "Retira en el local",estado: "En preparación",comentario: "Mucha demora, la pizza se enfrío"},
-    {codigo: 3,fecha: "03/01/2023", hora: "16:30",menu: "Napolitana", precio: 950,cliente: "Carlo Herrera",domicilio: "Capital S.F.V.C",tipoEntrega: "Retira en el local",estado: "Devuelto",comentario: "Buena atención"},
-    {codigo: 4,fecha: "13/11/2022", hora: "21:40",menu: "3 Helados de chocolate", precio: 2500,cliente: "Esteban Frias",domicilio: "Valle Chico Av 22. y 39",tipoEntrega: "Retira en el local",estado: "En camino",comentario: "No hice este pedido"},
-    {codigo: 5,fecha: "16/09/2022", hora: "22:30",menu: "12 Empanadas de pollo", precio: 1500,cliente: "De La Fuente Gonzalo",domicilio: "Capital S.F.V.C",tipoEntrega: "Envío a domicilio",estado: "Entregado",comentario: "Pedido por accidente"},
-    {codigo: 6,fecha: "25/10/2022", hora: "20:38",menu: "6 Lomitos", precio: 7850,cliente: "Maria Pereyra",domicilio: "Valle Viejo El Bañado Casa 21 calle Elias Barrionuevo",tipoEntrega: "Retira en el local",estado: "Cancelado",comentario:"El lomito estaba muy salado"}
+    {codigo: 1,fecha: "2022-09-07", hora: "15:38",menu: "Tarta de choclo x3, Medallones de pescado x12", precio: 1300,cliente: "Gabriel Avellaneda",domicilio: "La Carrera Fray Mamerto Esquiu",tipoEntrega: "Envío a domicilio",estado: "Pendiente",comentario: "Muy mal servicio"},
+    {codigo: 2,fecha: "2023-12-01", hora: "18:48",menu: "Pizza Calabresa", precio: 800,cliente: "Tomas Cordero",domicilio: "Capital S.F.V.C",tipoEntrega: "Retira en el local",estado: "En preparación",comentario: "Mucha demora, la pizza se enfrío"},
+    {codigo: 3,fecha: "2023-01-03", hora: "16:30",menu: "Napolitana", precio: 950,cliente: "Carlo Herrera",domicilio: "Capital S.F.V.C",tipoEntrega: "Retira en el local",estado: "Devuelto",comentario: "Buena atención"},
+    {codigo: 4,fecha: "2022-11-13", hora: "21:40",menu: "3 Helados de chocolate", precio: 2500,cliente: "Esteban Frias",domicilio: "Valle Chico Av 22. y 39",tipoEntrega: "Retira en el local",estado: "En camino",comentario: "No hice este pedido"},
+    {codigo: 5,fecha: "2024-09-16", hora: "22:30",menu: "12 Empanadas de pollo", precio: 1500,cliente: "De La Fuente Gonzalo",domicilio: "Capital S.F.V.C",tipoEntrega: "Envío a domicilio",estado: "Entregado",comentario: "Pedido por accidente"},
+    {codigo: 6,fecha: "2020-10-25", hora: "20:38",menu: "6 Lomitos", precio: 7850,cliente: "Maria Pereyra",domicilio: "Valle Viejo El Bañado Casa 21 calle Elias Barrionuevo",tipoEntrega: "Retira en el local",estado: "Cancelado",comentario:"El lomito estaba muy salado"}
 ];
 
 //CARGAR LOS PEDIDOS PENDIENTES DE UNA LISTA A UNA TABLA
