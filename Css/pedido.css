@@ -126,21 +126,6 @@ h1,h4,h5{
             font-size: 3.8rem;
         }
     }
-  
-  /* @media (max-width: 900px){
-    .container{
-        min-width: 100%;
-        background-color: aqua;
-        border: 2px solid black;
-    }
-    body{
-        border: 2px solid rgb(255, 6, 6);
-        max-width: 100%;
-    }
-    html{
-        border: 2px solid rgb(72, 6, 255);
-    }
-  } */
 
 #titulo{
     text-align: center;
