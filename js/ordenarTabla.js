@@ -8,7 +8,8 @@
     var table, rows, switching, i, x, y, debeCambiar, direccion, contador = 0;//contador es como un contador
     //debeCambiar es debe cambiar
    
-    table = document.getElementById("tablaPedidoPendiente");
+    table = document.getElementById("tablaRegistro");
+    
     switching = true;
    //Establezca la dirección de clasificación en ascendente:
     direccion = "asc";

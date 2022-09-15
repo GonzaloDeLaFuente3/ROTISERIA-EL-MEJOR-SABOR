@@ -6,7 +6,7 @@ var date = new Date()
 var horaActual = date.getHours() + ":" + date.getMinutes();
 var dateMasUno = agregarHoras(date,1);
 var horaActualMasUno = dateMasUno.getHours() + ":" + dateMasUno.getMinutes();
-var table = document.getElementById("tablaPedidoPendiente");
+var table = document.getElementById("tablaRegistro");
 var rows = table.rows;
 //var agregarAtributo = rows[1].getElementsByTagName("td")[0];
 // agregarAtributo.parentNode.setAttribute('class','table-danger');

@@ -102,12 +102,6 @@ hr{
   align-items: center;
 }
 
-
-#tablaListado{
-  margin-inline: 1rem;
-  margin-block: 1rem;
-}
-
 th{
   cursor: pointer;
   
