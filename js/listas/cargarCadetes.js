@@ -1,42 +1,42 @@
-const contenedorClientes = document.getElementById('contenedorClientes');//donde van a ir los td
-const contenedorModificarCliente = document.getElementById('contenedorModificarCliente');//modal de modificar
+const contenedorCadetes = document.getElementById('contenedorCadetes');//donde van a ir los td
+const contenedorModificarCadete = document.getElementById('contenedorModificarCadete');//modal de modificar
 
 
-//cargar tabla de clientes 
-listaClientes.forEach((cliente)=>{
+//cargar tabla de cadetes 
+listacadetes.forEach((cadete)=>{
     const tabla = document.createElement('tr');
     tabla.innerHTML =`
-        <td scope="row">${cliente.id}</th>
-            <td>${cliente.cuil}</td>
-            <td>${cliente.nombre}</td>
-            <td>${cliente.apellido}</td>
-            <td>${cliente.barrio}</td>
-            <td>${cliente.localidad}</td>
-            <td>${cliente.zona}</td>
-            <td>${cliente.telefono}</td>
+        <td scope="row">${cadete.id}</th>
+            <td>${cadete.cuil}</td>
+            <td>${cadete.nombre}</td>
+            <td>${cadete.apellido}</td>
+            <td>${cadete.barrio}</td>
+            <td>${cadete.localidad}</td>
+            <td>${cadete.zona}</td>
+            <td>${cadete.telefono}</td>
             <td>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalModificarCliente" id="modificar${cliente.id}"><i class="bi bi-pencil-square"></i></button>
-                <button class="btn btn-danger mx-2" id="eliminar${cliente.id}" ><i class="bi bi-trash-fill"></i></button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalModificarcadete" id="modificar${cadete.id}"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger mx-2" id="eliminar${cadete.id}" ><i class="bi bi-trash-fill"></i></button>
             </td>
         `
-    contenedorClientes.appendChild(tabla);
+    contenedorcadetes.appendChild(tabla);
 
-    const boton = document.getElementById(`modificar${cliente.id}`);
+    const boton = document.getElementById(`modificar${cadete.id}`);
     boton.addEventListener('click', () =>{
-        modificarCliente(cliente.id);
+        modificarcadete(cadete.id);
     })
 });
 
-//MODAL DE MODIFICAR UN CLIENTE
-const modificarCliente = (cliId) => {
+//MODAL DE MODIFICAR UN cadete
+const modificarcadete = (cliId) => {
     var z1;
     var z2;
     var z3;
     var z4;
     var z5;
 
-    contenedorModificarCliente.innerHTML = ""
-    const item = listaClientes.find((plato) => plato.id === cliId);
+    contenedorModificarcadete.innerHTML = ""
+    const item = listacadetes.find((plato) => plato.id === cliId);
 
     switch(item.zona){
         case "norte":
@@ -110,5 +110,5 @@ const modificarCliente = (cliId) => {
         <input type="number" class="form-control" value="${item.telefono}">
     </div>
     `
-    contenedorModificarCliente.appendChild(info);
+    contenedorModificarcadete.appendChild(info);
 }
