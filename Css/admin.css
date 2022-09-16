@@ -116,3 +116,21 @@ th:hover{
 tr{
   cursor: pointer;
 }
+
+#labelNotificaciones{
+  display: none;
+}
+
+@media (min-width: 1108px){
+  #labelNotificaciones{
+    display: inline;
+  }
+}
+
+
+@media (max-width: 992px){
+  #menuPedido{
+    margin-top: 1rem;
+    margin-inline: 2rem;
+  }
+}
