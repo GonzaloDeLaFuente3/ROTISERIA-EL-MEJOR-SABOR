@@ -13,56 +13,55 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../../Css/login.css">
         <link rel="stylesheet" href="../../Css/footerNavegacion.css">
-        
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="../../fonts/material-icon/css/material-design-iconic-font.css">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="../../css/login-register/login-register.css">
     </head>
     <body>
 
         <section class="vh-140" id="filtroFondo">
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                  <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-          
-                      <h3 class="mb-4">Ingresar</h3>
-                      
-                      <form action="#" method="post" autocomplete="on" class="needs-validation" novalidate>
-                        <div class="form-outline mb-3">
-                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Ingrese su email" required=""/>
-                            <div class="valid-feedback">El valor ingresado es valido</div>
-                            <div class="invalid-feedback">Ingrese un Email</div>
-                            <label class="form-label" for="typeEmailX-2">Email</label>
-                            
-                        </div>
-              
-                        <div class="form-outline mb-3">
-                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Ingrese su contraseña" required=""/>
-                            <div class="valid-feedback">El valor ingresado es valido</div>
-                            <div class="invalid-feedback">Ingrese una Contraseña</div>
-                            <label class="form-label" for="typePasswordX-2">Contraseña</label>
-                        </div>
-    
-                          <div class="mb-4">
-                            <a href="recuperarContraseña.html">¿Olvidó su contraseña?</a>
-                          </div>
-                          
-                          <button class="btn btn-primary" id="botonLogin" type="submit">Ingresar</button><br>
-                          <label class="form-label">o</label><br>
-                          <a href="../abm-cliente/altaCliente.html" class="btn btn-primary">Crea una cuenta</a>
-    
-                          <hr class="my-4">
-                          <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                            type="submit"><i class="fab fa-google me-2"></i>Continuar con google</button>
-                            <br><br>
-                          <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-                            type="submit"><i class="fab fa-facebook-f me-2"></i>Continuar con facebook</button>
-                      </form>
-          
+            <!-- Sing in  Form -->
+          <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Create an account</a>
                     </div>
-                  </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>  
+            </div>
+          </section> 
         </section>
 
         <footer>

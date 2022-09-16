@@ -4,16 +4,6 @@ body {
     background-size: cover;
   }
 
-.container-fluid{
-    align-items: center;
-}
-
-#cajaLogin{
-    background-color: #EDF6F9;
-    border-radius: 15px;
-    width: 500px;
-    height: 600px;
-}
 
 #filtroFondo{
     backdrop-filter: blur(7px);
