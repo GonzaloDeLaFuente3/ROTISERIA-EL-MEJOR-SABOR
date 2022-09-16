@@ -30,40 +30,110 @@
                 <div class="container">
                     <div class="signup-content">
                         <div class="signup-form">
-                            <h2 class="form-title">Registrarse</h2>
+                            <h2 class="form-title text-center">Registrarse</h2>
                             <form method="POST" class="register-form" id="register-form">
-                                <div class="form-group">
-                                    <label for="name"><i class="bi bi-card-heading"></i></label>
-                                    <input type="number" name="name" id="name" placeholder="Ingrese su cuil"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>CUIL</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-card-heading"></i></label>
+                                        <input type="number" placeholder="Ingrese su cuil"/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="name" id="name" placeholder="Your Name"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Nombre</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-person-fill"></i></label>
+                                        <input type="text" placeholder="Ingrese su nombre"/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Apellido</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-person-fill"></i></label>
+                                        <input type="text" placeholder="Ingrese su apellido"/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Calle</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-geo-alt-fill"></i></label>
+                                        <input type="text" placeholder="Ingrese su calle"/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Localidad</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-geo-alt-fill"></i></label>
+                                        <input type="text" placeholder="Ingrese su localidad"/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Zona</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-geo-alt-fill"></i></label>
+                                        <!-- <select class="form-select form-select-sm" aria-label="Default select example">
+                                            <option selected>Seleccione una zona</option>
+                                            <option value="1">Norte</option>
+                                            <option value="2">Sur</option>
+                                            <option value="3">Este</option>
+                                            <option value="4">Oste</option>
+                                          </select> -->
+                                          <input type="text" placeholder="Ingrese su zona de domicilio"/>
+                                    </div>
                                 </div>
-                                <div class="form-group form-button">
-                                    <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Teléfono</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label><i class="bi bi-telephone-fill"></i></label>
+                                        
+                                        <input type="se" placeholder="Ingrese su teléfono de contacto"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Email</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label for="email"><i class="bi bi-envelope-fill"></i></label>
+                                        <input type="email" placeholder="Ingrese su correo electrónico"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Clave</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label for="pass"><i class="bi bi-key-fill"></i></label>
+                                        <input type="password" placeholder="Ingrese una contraseña"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3 mt-1">
+                                        <span>Clave</span>
+                                    </div>
+                                    <div class="form-group col-sm-9">
+                                        <label for="re-pass"><i class="bi bi-key"></i></label>
+                                        <input type="password" placeholder="Repita su contraseña"/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-button text-center">
+                                    <input type="submit" name="signup" id="signup" class="form-submit" value="Crear cuenta"/>
                                 </div>
                             </form>
-                        </div>
-                        <div class="signup-image">
-                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                            <a href="#" class="signup-image-link">I am already member</a>
                         </div>
                     </div>
                 </div>
