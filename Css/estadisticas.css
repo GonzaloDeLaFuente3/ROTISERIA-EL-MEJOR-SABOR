@@ -59,6 +59,14 @@ body{
   margin-bottom: 1rem;
   padding-bottom: 1.5rem;
 }
+.panelMenusHistorial{
+    margin: auto;
+    
+    background-color: #83C5BE;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+  }
 
 
 
