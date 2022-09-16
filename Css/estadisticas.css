@@ -59,6 +59,21 @@ body{
   margin-bottom: 1rem;
   padding-bottom: 1.5rem;
 }
+
+
+
+/*ANTES DE LLEGAR A 768*/
+@media (max-width: 400px){
+    .panelMenus h2{
+        width: 220;
+        text-align: center;
+        font-size: 2.5rem;
+        
+    }
+}
+h2 {
+    text-align: center;
+}
 .panelMenusHistorial{
     margin: auto;
     
@@ -78,3 +93,22 @@ th:hover{
     color: #a1a1a1;
     background-color: #000000;
 }
+
+/* reponsivo */
+#titulo{
+    text-align: center;
+    
+    }
+    
+    /*MENOR A 768*/
+    #titulo img{
+        margin-top: 1rem;
+        width: 220px;
+    }
+    
+    /*ANTES DE LLEGAR A 768*/
+    @media (min-width: 768px){
+        #titulo img{
+            width: 500px;
+        }
+    }
