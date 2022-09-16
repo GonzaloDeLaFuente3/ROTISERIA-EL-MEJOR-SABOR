@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/header-footer.css">
     <link href="../../css/verTablas.css" rel="stylesheet">
 
-    <title>Cadetes</title>
+    <title>Empleados</title>
 </head>
 <body>
     <header>
@@ -53,6 +53,26 @@
         </nav>
     </header>
 
+    <div class="modal fade" id="modalModificarEmpleado" tabindex="-1" area-hidden="true" aria-labelledby="modalInformacion">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="bi bi-pencil-square mx-2"></i>
+                    <h5 class="modal-title" id="modal-title">Modificar Empleado</h5>
+                    <button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="contenedorModificarEmpleado">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success" id="modificarEmpleado" type="button">Guardar cambios</a>
+                    <a class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="modalModificarCadete" tabindex="-1" area-hidden="true" aria-labelledby="modalInformacion">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -80,23 +100,56 @@
         <div class="container-fluid">
             <section class="panelMenus">
                 <br>
-                <h2 id="labelMenus" class="text-center">Mostrar Cadetes</h2>
-                <p id="info"><strong>Nota:</strong> para ordenar los platos según un campo determinado, presione en la columna correspondiente.
+                <h2 id="labelMenus" class="text-center">Registro Empleados</h2>
+                <p id="info"><strong>Nota:</strong> para ordenar los empleados según un campo determinado, presione en la columna correspondiente.
                 <br>La búsqueda se puede realizar por cualquier campo de las columnas.</p>
-                <div class="row mx-5">
+                <div class="row mx-3">
+                    <div class="col">
+                        <table class="table table-primary table-hover table-striped text-center align-middle" id="tablaEmpleados">
+                            <thead> 
+                                <tr>
+                                    <th scope="col" onclick="sortTable(0, 'str')">#</th>
+                                    <th scope="col" onclick="sortTable(1, 'int')" >Cuil</th>
+                                    <th scope="col" onclick="sortTable(2, 'str')" >Nombre</th>
+                                    <th scope="col" onclick="sortTable(3, 'str')" >Apellido</th>
+                                    <th scope="col" onclick="sortTable(4, 'date')" style="width: 13%;">Fecha Nacimiento</th>
+                                    <th scope="col" onclick="sortTable(5, 'str')">Barrio</th>
+                                    <th scope="col" onclick="sortTable(6, 'str')">Localidad</th>
+                                    <th scope="col" onclick="sortTable(7, 'int')">Telefono</th>
+                                    <th scope="col" onclick="sortTable(8, 'date')" style="width: 14%;">Fecha de ingreso</th>
+                                    <th scope="col" style="width: 12%;">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenedorEmpleados">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panelMenus">
+                <br>
+                <h2 id="labelMenus" class="text-center">Registro Cadetes</h2>
+                <p id="info"><strong>Nota:</strong> para ordenar los cadetes según un campo determinado, presione en la columna correspondiente.
+                <br>La búsqueda se puede realizar por cualquier campo de las columnas.</p>
+                <div class="row">
                     <div class="col">
                         <table class="table table-primary table-hover table-striped text-center align-middle" id="tablaRegistro">
                             <thead> 
                                 <tr>
                                     <th scope="col" onclick="sortTable(0, 'str')">#</th>
-                                    <th scope="col" onclick="sortTable(1, 'str')" >Cuil</th>
+                                    <th scope="col" onclick="sortTable(1, 'int')" >Cuil</th>
                                     <th scope="col" onclick="sortTable(2, 'str')" >Nombre</th>
                                     <th scope="col" onclick="sortTable(3, 'str')" >Apellido</th>
-                                    <th scope="col" onclick="sortTable(4, 'str')" >Barrio</th>
-                                    <th scope="col" onclick="sortTable(5, 'str')">Localidad</th>
-                                    <th scope="col" onclick="sortTable(6, 'str')" >Zona</th>
-                                    <th scope="col" onclick="sortTable(7, 'str')" >Telefono</th>
-                                    <th scope="col" style="width: 18%;">Acción</th>
+                                    <th scope="col" onclick="sortTable(4, 'date')" style="width: 13%;">Fecha Nacimiento</th>
+                                    <th scope="col" onclick="sortTable(5, 'str')">Barrio</th>
+                                    <th scope="col" onclick="sortTable(6, 'str')">Localidad</th>
+                                    <th scope="col" onclick="sortTable(7, 'int')">Telefono</th>
+                                    <th scope="col" onclick="sortTable(8, 'date')" style="width: 12%;">Fecha de ingreso</th>
+                                    <th scope="col" onclick="sortTable(9, 'str')" >Zona de entrega</th>
+                                    <th scope="col" onclick="sortTable(10, 'date')" >Vigencia Carnet</th>
+                                    <th scope="col" onclick="sortTable(11, 'str')" >Patente</th>
+                                    <th scope="col" style="width: 12%;">Acción</th>
                                 </tr>
                             </thead>
                             <tbody id="contenedorCadetes">
@@ -133,8 +186,8 @@
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="../../js/buscar.js"></script>
-    <script src="../../js/listas/listaCadetes.js"></script>
-    <script src="../../js/listas/cargarCadetes.js"></script>
+    <script src="../../js/listas/listaEmpleados.js"></script>
+    <script src="../../js/listas/cargarEmpleados.js"></script>
     
 
 </body>
